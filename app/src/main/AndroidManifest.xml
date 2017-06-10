@@ -17,12 +17,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <receiver android:name=".MainActivity$MyReceiver" >
-            <intent-filter>
-                <action android:name="android.intent.action.MEDIA_SCANNER_SCAN_FILE" />
-                <data android:scheme="file" />
-            </intent-filter>
-        </receiver>
     </application>
 
 </manifest>

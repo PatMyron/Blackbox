@@ -52,6 +52,15 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
             sm = new SoundMeter();
             sm.start();
         }
+        BroadcastReceiver receiver = new BroadcastReceiver() {
+            public void onReceive(Context context, Intent intent) {
+                ((TextView) findViewById(R.id.tv13)).setText("SCREENSHOT");
+            }
+        };
+        IntentFilter filter = new IntentFilter(Intent.ACTION_MEDIA_SCANNER_SCAN_FILE);
+        filter.addDataScheme("file");
+        registerReceiver(receiver, filter);
+
     }
 
     @Override
@@ -167,13 +176,6 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
                 return mRecorder.getMaxAmplitude();
             else
                 return 0;
-        }
-    }
-
-    public static class MyReceiver extends BroadcastReceiver {
-        @Override
-        public void onReceive(Context context, Intent intent) {
-            Log.e("pmyron", "SCREENSHOT");
         }
     }
 
