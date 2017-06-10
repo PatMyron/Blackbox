@@ -20,7 +20,6 @@ import android.provider.Settings.SettingNotFoundException;
 import android.support.annotation.NonNull;
 import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.widget.TextView;
 
 import java.io.IOException;
@@ -60,7 +59,6 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
         IntentFilter filter = new IntentFilter(Intent.ACTION_MEDIA_SCANNER_SCAN_FILE);
         filter.addDataScheme("file");
         registerReceiver(receiver, filter);
-
     }
 
     @Override
