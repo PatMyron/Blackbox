@@ -106,16 +106,11 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
         AudioManager am = (AudioManager) getSystemService(Context.AUDIO_SERVICE);
         ((TextView) findViewById(R.id.tv5)).setText("HEADSET: " + am.isWiredHeadsetOn());
         ((TextView) findViewById(R.id.tv6)).setText("VOLUME: " + am.getStreamVolume(AudioManager.STREAM_MUSIC));
-        ((TextView) findViewById(R.id.tv8)).setText("AIRPLANE: " + isAirplaneModeOn(this));
+        ((TextView) findViewById(R.id.tv8)).setText("AIRPLANE: " + Settings.Global.getInt(getContentResolver(), Settings.Global.AIRPLANE_MODE_ON, 0));
         if (ActivityCompat.checkSelfPermission(this, Manifest.permission.RECORD_AUDIO) == PackageManager.PERMISSION_GRANTED && sm != null) {
             ((TextView) findViewById(R.id.tv10)).setText("NOISE: " + sm.getAmplitude());
         }
         ((TextView) findViewById(R.id.tv12)).setText("CLIPBOARD: " + ((ClipboardManager) getSystemService(CLIPBOARD_SERVICE)).getText());
-    }
-
-    public static boolean isAirplaneModeOn(Context context) {
-        return Settings.Global.getInt(context.getContentResolver(),
-                Settings.Global.AIRPLANE_MODE_ON, 0) != 0;
     }
 
     private void batteryBroadcastReceiver() {
