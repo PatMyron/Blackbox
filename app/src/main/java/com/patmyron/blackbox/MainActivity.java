@@ -51,14 +51,8 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
             sm = new SoundMeter();
             sm.start();
         }
-        BroadcastReceiver receiver = new BroadcastReceiver() {
-            public void onReceive(Context context, Intent intent) {
-                ((TextView) findViewById(R.id.tv13)).setText("SCREENSHOT");
-            }
-        };
-        IntentFilter filter = new IntentFilter(Intent.ACTION_MEDIA_SCANNER_SCAN_FILE);
-        filter.addDataScheme("file");
-        registerReceiver(receiver, filter);
+        batteryBroadcastReceiver();
+        screenshotBroadcastReceiver();
     }
 
     @Override
@@ -113,7 +107,6 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
         ((TextView) findViewById(R.id.tv5)).setText("HEADSET: " + am.isWiredHeadsetOn());
         ((TextView) findViewById(R.id.tv6)).setText("VOLUME: " + am.getStreamVolume(AudioManager.STREAM_MUSIC));
         ((TextView) findViewById(R.id.tv8)).setText("AIRPLANE: " + isAirplaneModeOn(this));
-        batteryLevel();
         if (ActivityCompat.checkSelfPermission(this, Manifest.permission.RECORD_AUDIO) == PackageManager.PERMISSION_GRANTED && sm != null) {
             ((TextView) findViewById(R.id.tv10)).setText("NOISE: " + sm.getAmplitude());
         }
@@ -125,7 +118,7 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
                 Settings.Global.AIRPLANE_MODE_ON, 0) != 0;
     }
 
-    private void batteryLevel() {
+    private void batteryBroadcastReceiver() {
         BroadcastReceiver batteryLevelReceiver = new BroadcastReceiver() {
             public void onReceive(Context context, Intent intent) {
                 context.unregisterReceiver(this);
@@ -140,6 +133,18 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
         };
         IntentFilter batteryLevelFilter = new IntentFilter(Intent.ACTION_BATTERY_CHANGED);
         registerReceiver(batteryLevelReceiver, batteryLevelFilter);
+    }
+
+    private void screenshotBroadcastReceiver() {
+        BroadcastReceiver receiver = new BroadcastReceiver() {
+            public void onReceive(Context context, Intent intent) {
+                context.unregisterReceiver(this);
+                ((TextView) findViewById(R.id.tv13)).setText("SCREENSHOT");
+            }
+        };
+        IntentFilter filter = new IntentFilter(Intent.ACTION_MEDIA_SCANNER_SCAN_FILE);
+        filter.addDataScheme("file");
+        registerReceiver(receiver, filter);
     }
 
     public class SoundMeter {
