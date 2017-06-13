@@ -142,10 +142,10 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
         registerReceiver(receiver, filter);
     }
 
-    public class SoundMeter {
+    private class SoundMeter {
         private MediaRecorder mRecorder = null;
 
-        public void start() {
+        void start() {
             if (mRecorder == null) {
                 mRecorder = new MediaRecorder();
                 mRecorder.setAudioSource(MediaRecorder.AudioSource.MIC);
@@ -169,7 +169,7 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
             }
         }
 
-        public double getAmplitude() {
+        double getAmplitude() {
             if (mRecorder != null)
                 return mRecorder.getMaxAmplitude();
             else
