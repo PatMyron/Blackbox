@@ -23,6 +23,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.widget.TextView;
 
 import java.io.IOException;
+import java.util.Date;
 
 public class MainActivity extends AppCompatActivity implements SensorEventListener {
 
@@ -110,7 +111,7 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
             ((TextView) findViewById(R.id.tv10)).setText("NOISE: " + sm.getAmplitude());
         }
         ((TextView) findViewById(R.id.tv12)).setText("CLIPBOARD: " + ((ClipboardManager) getSystemService(CLIPBOARD_SERVICE)).getText());
-        ((TextView) findViewById(R.id.tv18)).setText("DATETIME: " + new java.util.Date());
+        ((TextView) findViewById(R.id.tv18)).setText("DATETIME: " + new Date());
     }
 
     private void batteryBroadcastReceiver() {
