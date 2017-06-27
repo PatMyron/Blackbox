@@ -110,6 +110,7 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
             ((TextView) findViewById(R.id.tv10)).setText("NOISE: " + sm.getAmplitude());
         }
         ((TextView) findViewById(R.id.tv12)).setText("CLIPBOARD: " + ((ClipboardManager) getSystemService(CLIPBOARD_SERVICE)).getText());
+        ((TextView) findViewById(R.id.tv18)).setText("DATETIME: " + new java.util.Date());
     }
 
     private void batteryBroadcastReceiver() {
