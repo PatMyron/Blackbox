@@ -1,0 +1,42 @@
+1 – 6: orientation
+7 – 8: brightness
+9: Mute
+10 - 11: volume
+12: headphones
+13: proximity
+14: airplane
+15: screenshot
+16 – 17: time (clock)
+18 - 20: battery
+21 – 23: Mic levels
+24: Say “Blackbox”                                          !
+25 – 26: time (moon)
+27: orientation
+28 – 30: time (sun)
+31 – 34: location (distance)
+35: fingerprint scanner                                     ?
+36: Open app in lower left corner of your home page         ?
+37: shake phone
+38: toggle app Settings                                     ?
+39: rewind time
+40: turn off Phone                                          !
+41: clipboard
+42: proximity morse code
+43 – 48: mic pitch                                          !
+49 – 51: location (altitude)
+52 – 53: Call accept / decline                              ?
+54: touch + screenshot
+55: url                                                     !
+56 - 57: touch (hint boxes)
+58: touch (hold)
+59: Share
+60: time (away from app)
+61: Notifications                                           !
+62: Notifications
+63: Kill app                                                !
+64: Notifications
+65: Settings
+66: Notifications
+67 - 68: orientation
+69: acceleromator
+70 - 71: camera (QR)                                        !
