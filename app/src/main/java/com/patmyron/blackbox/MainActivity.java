@@ -7,6 +7,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.content.pm.PackageManager;
+import android.graphics.drawable.AnimationDrawable;
 import android.hardware.Sensor;
 import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
@@ -64,6 +65,8 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
         }
         batteryBroadcastReceiver();
         screenshotBroadcastReceiver();
+        findViewById(R.id.iv).setBackgroundResource(R.drawable.animation);
+        ((AnimationDrawable) findViewById(R.id.iv).getBackground()).start();
     }
 
     @Override

@@ -1,0 +1,361 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation-list xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/animation"
+    android:oneshot="true">
+
+    <item
+        android:drawable="@drawable/blink00"
+        android:duration="15" />
+
+    <item
+        android:drawable="@drawable/blink01"
+        android:duration="15" />
+
+    <item
+        android:drawable="@drawable/blink02"
+        android:duration="15" />
+
+    <item
+        android:drawable="@drawable/blink03"
+        android:duration="15" />
+
+    <item
+        android:drawable="@drawable/blink04"
+        android:duration="15" />
+
+    <item
+        android:drawable="@drawable/blink05"
+        android:duration="15" />
+
+    <item
+        android:drawable="@drawable/blink06"
+        android:duration="15" />
+
+    <item
+        android:drawable="@drawable/blink07"
+        android:duration="15" />
+
+    <item
+        android:drawable="@drawable/blink08"
+        android:duration="15" />
+
+    <item
+        android:drawable="@drawable/blink09"
+        android:duration="15" />
+
+    <item
+        android:drawable="@drawable/blink10"
+        android:duration="15" />
+
+    <item
+        android:drawable="@drawable/blink11"
+        android:duration="15" />
+
+    <item
+        android:drawable="@drawable/blink12"
+        android:duration="15" />
+
+    <item
+        android:drawable="@drawable/blink13"
+        android:duration="15" />
+
+    <item
+        android:drawable="@drawable/blink14"
+        android:duration="15" />
+
+    <item
+        android:drawable="@drawable/blink15"
+        android:duration="15" />
+
+    <item
+        android:drawable="@drawable/blink16"
+        android:duration="15" />
+
+    <item
+        android:drawable="@drawable/blink17"
+        android:duration="15" />
+
+    <item
+        android:drawable="@drawable/blink18"
+        android:duration="15" />
+
+    <item
+        android:drawable="@drawable/blink19"
+        android:duration="15" />
+
+    <item
+        android:drawable="@drawable/blink20"
+        android:duration="15" />
+
+    <item
+        android:drawable="@drawable/blink21"
+        android:duration="15" />
+
+    <item
+        android:drawable="@drawable/blink22"
+        android:duration="15" />
+
+    <item
+        android:drawable="@drawable/blink23"
+        android:duration="15" />
+
+    <item
+        android:drawable="@drawable/blink24"
+        android:duration="15" />
+
+    <item
+        android:drawable="@drawable/blink15"
+        android:duration="15" />
+
+    <item
+        android:drawable="@drawable/blink26"
+        android:duration="15" />
+
+    <item
+        android:drawable="@drawable/blink27"
+        android:duration="15" />
+
+    <item
+        android:drawable="@drawable/blink28"
+        android:duration="15" />
+
+    <item
+        android:drawable="@drawable/blink29"
+        android:duration="15" />
+
+    <item
+        android:drawable="@drawable/blink30"
+        android:duration="15" />
+
+    <item
+        android:drawable="@drawable/blink31"
+        android:duration="15" />
+
+    <item
+        android:drawable="@drawable/blink32"
+        android:duration="15" />
+
+    <item
+        android:drawable="@drawable/blink33"
+        android:duration="15" />
+
+    <item
+        android:drawable="@drawable/blink34"
+        android:duration="15" />
+
+    <item
+        android:drawable="@drawable/blink35"
+        android:duration="15" />
+
+    <item
+        android:drawable="@drawable/blink36"
+        android:duration="15" />
+
+    <item
+        android:drawable="@drawable/blink37"
+        android:duration="15" />
+
+    <item
+        android:drawable="@drawable/blink38"
+        android:duration="15" />
+
+    <item
+        android:drawable="@drawable/blink39"
+        android:duration="15" />
+
+    <item
+        android:drawable="@drawable/blink40"
+        android:duration="15" />
+
+    <item
+        android:drawable="@drawable/blink41"
+        android:duration="15" />
+
+    <item
+        android:drawable="@drawable/blink42"
+        android:duration="15" />
+
+    <item
+        android:drawable="@drawable/blink43"
+        android:duration="15" />
+
+    <item
+        android:drawable="@drawable/blink44"
+        android:duration="15" />
+
+    <item
+        android:drawable="@drawable/blink45"
+        android:duration="15" />
+
+    <item
+        android:drawable="@drawable/blink46"
+        android:duration="15" />
+
+    <item
+        android:drawable="@drawable/blink47"
+        android:duration="15" />
+
+    <item
+        android:drawable="@drawable/blink48"
+        android:duration="15" />
+
+    <item
+        android:drawable="@drawable/blink49"
+        android:duration="15" />
+
+    <item
+        android:drawable="@drawable/blink50"
+        android:duration="15" />
+
+    <item
+        android:drawable="@drawable/blink51"
+        android:duration="15" />
+
+    <item
+        android:drawable="@drawable/blink52"
+        android:duration="15" />
+
+    <item
+        android:drawable="@drawable/blink53"
+        android:duration="15" />
+
+    <item
+        android:drawable="@drawable/blink54"
+        android:duration="15" />
+
+    <item
+        android:drawable="@drawable/blink55"
+        android:duration="15" />
+
+    <item
+        android:drawable="@drawable/blink56"
+        android:duration="15" />
+
+    <item
+        android:drawable="@drawable/blink57"
+        android:duration="15" />
+
+    <item
+        android:drawable="@drawable/blink58"
+        android:duration="15" />
+
+    <item
+        android:drawable="@drawable/blink59"
+        android:duration="15" />
+
+    <item
+        android:drawable="@drawable/blink60"
+        android:duration="15" />
+
+    <item
+        android:drawable="@drawable/blink61"
+        android:duration="15" />
+
+    <item
+        android:drawable="@drawable/blink62"
+        android:duration="15" />
+
+    <item
+        android:drawable="@drawable/blink63"
+        android:duration="15" />
+
+    <item
+        android:drawable="@drawable/blink64"
+        android:duration="15" />
+
+    <item
+        android:drawable="@drawable/blink65"
+        android:duration="15" />
+
+    <item
+        android:drawable="@drawable/blink66"
+        android:duration="15" />
+
+    <item
+        android:drawable="@drawable/blink67"
+        android:duration="15" />
+
+    <item
+        android:drawable="@drawable/blink68"
+        android:duration="15" />
+
+    <item
+        android:drawable="@drawable/blink69"
+        android:duration="15" />
+
+    <item
+        android:drawable="@drawable/blink70"
+        android:duration="15" />
+
+    <item
+        android:drawable="@drawable/blink71"
+        android:duration="15" />
+
+    <item
+        android:drawable="@drawable/blink72"
+        android:duration="15" />
+
+    <item
+        android:drawable="@drawable/blink73"
+        android:duration="15" />
+
+    <item
+        android:drawable="@drawable/blink74"
+        android:duration="15" />
+
+    <item
+        android:drawable="@drawable/blink75"
+        android:duration="15" />
+
+    <item
+        android:drawable="@drawable/blink76"
+        android:duration="15" />
+
+    <item
+        android:drawable="@drawable/blink77"
+        android:duration="15" />
+
+    <item
+        android:drawable="@drawable/blink78"
+        android:duration="15" />
+
+    <item
+        android:drawable="@drawable/blink79"
+        android:duration="15" />
+
+    <item
+        android:drawable="@drawable/blink80"
+        android:duration="15" />
+
+    <item
+        android:drawable="@drawable/blink81"
+        android:duration="15" />
+
+    <item
+        android:drawable="@drawable/blink82"
+        android:duration="15" />
+
+    <item
+        android:drawable="@drawable/blink83"
+        android:duration="15" />
+
+    <item
+        android:drawable="@drawable/blink84"
+        android:duration="15" />
+
+    <item
+        android:drawable="@drawable/blink85"
+        android:duration="15" />
+
+    <item
+        android:drawable="@drawable/blink86"
+        android:duration="15" />
+
+    <item
+        android:drawable="@drawable/blink87"
+        android:duration="15" />
+
+    <item
+        android:drawable="@drawable/blink88"
+        android:duration="15" />
+</animation-list>
