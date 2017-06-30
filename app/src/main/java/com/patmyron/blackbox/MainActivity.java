@@ -54,34 +54,28 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
         switch (event.sensor.getType()) {
             case Sensor.TYPE_GRAVITY:
                 if (event.values[0] < -9.7) {
-                    ImageView iv = (ImageView) ((RelativeLayout) findViewById(R.id.ll)).getChildAt(0);
-                    iv.setBackgroundResource(R.drawable.animation);
-                    ((AnimationDrawable) iv.getBackground()).start();
+                    animation(0);
                 } else if (event.values[0] > 9.7) {
-                    ImageView iv = (ImageView) ((RelativeLayout) findViewById(R.id.ll)).getChildAt(1);
-                    iv.setBackgroundResource(R.drawable.animation);
-                    ((AnimationDrawable) iv.getBackground()).start();
+                    animation(1);
                 }
                 if (event.values[1] < -9.7) {
-                    ImageView iv = (ImageView) ((RelativeLayout) findViewById(R.id.ll)).getChildAt(2);
-                    iv.setBackgroundResource(R.drawable.animation);
-                    ((AnimationDrawable) iv.getBackground()).start();
+                    animation(2);
                 } else if (event.values[1] > 9.7) {
-                    ImageView iv = (ImageView) ((RelativeLayout) findViewById(R.id.ll)).getChildAt(3);
-                    iv.setBackgroundResource(R.drawable.animation);
-                    ((AnimationDrawable) iv.getBackground()).start();
+                    animation(3);
                 }
                 if (event.values[2] < -9.7) {
-                    ImageView iv = (ImageView) ((RelativeLayout) findViewById(R.id.ll)).getChildAt(4);
-                    iv.setBackgroundResource(R.drawable.animation);
-                    ((AnimationDrawable) iv.getBackground()).start();
+                    animation(4);
                 } else if (event.values[2] > 9.7) {
-                    ImageView iv = (ImageView) ((RelativeLayout) findViewById(R.id.ll)).getChildAt(5);
-                    iv.setBackgroundResource(R.drawable.animation);
-                    ((AnimationDrawable) iv.getBackground()).start();
+                    animation(5);
                 }
                 break;
         }
+    }
+
+    private void animation(int index) {
+        ImageView iv = (ImageView) ((RelativeLayout) findViewById(R.id.ll)).getChildAt(index);
+        iv.setBackgroundResource(R.drawable.animation);
+        ((AnimationDrawable) iv.getBackground()).start();
     }
 
 }
