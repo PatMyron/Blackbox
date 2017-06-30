@@ -1,15 +1,13 @@
-1 – 6: orientation
-7 – 8: brightness
-9: Mute
-10 - 11: volume
-12: headphones
-13: proximity
-14: airplane
-15: screenshot
-16 – 17: time (clock)
-18 - 20: battery
-21 – 23: Mic levels
-24: Say “Blackbox”                                          !
+1 – 6: orientation #DE083B
+7 – 8: brightness #FFC837
+9 - 12: Mute/volume/headphones #FA5F00
+13: proximity #FC7B53
+14: airplane #5ED5B9
+15: screenshot #B29DD6
+16 – 17: time (clock) #1BA23B
+18 - 20: battery #7BD207 #E64E39
+21 – 23: Mic levels #67B7F1
+24: Say “Blackbox” #6937FB                                  !
 25 – 26: time (moon)
 27: orientation
 28 – 30: time (sun)
