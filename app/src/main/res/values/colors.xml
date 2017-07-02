@@ -4,4 +4,16 @@
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
     <color name="bg">#000000</color>
+    <color name="puzzle1">#DE083B</color>
+    <color name="puzzle2">#FFC837</color>
+    <color name="puzzle3">#FA5F00</color>
+    <color name="puzzle4">#FC7B53</color>
+    <color name="puzzle5">#5ED5B9</color>
+    <color name="puzzle6">#B29DD6</color>
+    <color name="puzzle7">#1BA23B</color>
+    <color name="puzzle8">#7BD207</color>
+    <color name="puzzle9">#E64E39</color>
+    <color name="puzzle10">#67B7F1</color>
+    <color name="puzzle11">#6937FB</color>
+    <color name="puzzle12">#BD5682</color>
 </resources>
