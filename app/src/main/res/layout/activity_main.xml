@@ -16,6 +16,36 @@
             android:layout_height="75dp"
             android:background="#00000000" />
 
+        <ImageView
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:background="#00000000" />
+
+        <ImageView
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:background="#00000000" />
+
+        <ImageView
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:background="#00000000" />
+
+        <ImageView
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:background="#00000000" />
+
+        <ImageView
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:background="#00000000" />
+
+        <ImageView
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:background="#00000000" />
+
         <ImageButton
             android:layout_width="75dp"
             android:layout_height="75dp"
