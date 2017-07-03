@@ -56,13 +56,20 @@ public class Puzzle1Activity extends AppCompatActivity implements SensorEventLis
         int deviceWidth = displayMetrics.widthPixels;
         int deviceHeight = displayMetrics.heightPixels;
         ViewGroup.MarginLayoutParams marginParams = (ViewGroup.MarginLayoutParams) fluid.getLayoutParams();
-        marginParams.topMargin = deviceHeight / 2 - (int) (z / 9.8 * deviceHeight) / 2;
+        marginParams.topMargin = deviceHeight / 2;
         Log.e("pm", String.valueOf(deviceHeight / 2 - (int) (z / 9.8 * deviceHeight) / 2));
         fluid.setPivotX(deviceWidth / 2 + 5000);
         fluid.setPivotY(0);
         fluid.setRotation((float) Math.toDegrees(acos(y / 9.8)));
         if (x < 0) {
             fluid.setRotation(fluid.getRotation() * -1);
+        }
+        if (Double.isNaN(fluid.getRotation())) {
+            if (y > 0) {
+                fluid.setRotation(0);
+            } else {
+                fluid.setRotation(180);
+            }
         }
 
         if (x < -9.7) {
