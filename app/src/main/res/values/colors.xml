@@ -8,6 +8,7 @@
     <color name="puzzle1translucent">#99DE083B</color>
     <color name="puzzle2">#FFC837</color>
     <color name="puzzle3">#FA5F00</color>
+    <color name="puzzle3translucent">#99FA5F00</color>
     <color name="puzzle4">#FC7B53</color>
     <color name="puzzle5">#5ED5B9</color>
     <color name="puzzle6">#B29DD6</color>
