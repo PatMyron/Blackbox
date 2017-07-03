@@ -21,7 +21,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".Puzzle1Activity" />
-        <activity android:name=".Puzzle2Activity"></activity>
+        <activity android:name=".Puzzle2Activity" />
+        <activity android:name=".Puzzle3Activity" />
     </application>
 
 </manifest>
