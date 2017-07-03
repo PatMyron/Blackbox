@@ -50,7 +50,7 @@ public class Puzzle3Activity extends AppCompatActivity implements SensorEventLis
         if (am.getRingerMode() == AudioManager.RINGER_MODE_SILENT) {
             animation(3);
         }
-        int media = am.getStreamVolume(AudioManager.STREAM_MUSIC);
+        int media = am.getStreamVolume(AudioManager.STREAM_RING);
         if (media < 1) {
             animation(1);
         } else if (media == am.getStreamMaxVolume(AudioManager.STREAM_MUSIC)) {
