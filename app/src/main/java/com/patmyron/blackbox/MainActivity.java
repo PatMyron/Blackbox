@@ -23,4 +23,9 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, Puzzle1Activity.class);
         startActivity(intent);
     }
+
+    public void puzzle2(View view) {
+        Intent intent = new Intent(this, Puzzle2Activity.class);
+        startActivity(intent);
+    }
 }

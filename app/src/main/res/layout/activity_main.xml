@@ -236,6 +236,7 @@
             android:layout_width="75dp"
             android:layout_height="75dp"
             android:background="#00000000"
+            android:onClick="puzzle2"
             android:scaleType="fitXY"
             android:src="@drawable/dot"
             android:tint="@color/puzzle2" />
@@ -244,6 +245,7 @@
             android:layout_width="75dp"
             android:layout_height="75dp"
             android:background="#00000000"
+            android:onClick="puzzle2"
             android:scaleType="fitXY"
             android:src="@drawable/dot"
             android:tint="@color/puzzle2" />

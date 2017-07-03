@@ -16,10 +16,12 @@
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity android:name=".Puzzle1Activity" />
+        <activity android:name=".Puzzle2Activity"></activity>
     </application>
 
 </manifest>
