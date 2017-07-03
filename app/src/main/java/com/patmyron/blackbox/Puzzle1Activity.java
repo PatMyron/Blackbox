@@ -65,19 +65,19 @@ public class Puzzle1Activity extends AppCompatActivity implements SensorEventLis
             fluid.setRotation(fluid.getRotation() * -1);
         }
 
-        if (event.values[0] < -9.7) {
+        if (x < -9.7) {
             animation(0);
-        } else if (event.values[0] > 9.7) {
+        } else if (x > 9.7) {
             animation(1);
         }
-        if (event.values[1] < -9.7) {
+        if (y < -9.7) {
             animation(2);
-        } else if (event.values[1] > 9.7) {
+        } else if (y > 9.7) {
             animation(3);
         }
-        if (event.values[2] < -9.7) {
+        if (z < -9.7) {
             animation(4);
-        } else if (event.values[2] > 9.7) {
+        } else if (z > 9.7) {
             animation(5);
         }
         ViewGroup vg = (ViewGroup) findViewById(R.id.ll);
