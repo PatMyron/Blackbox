@@ -78,5 +78,5 @@
         android:layout_width="1000000dp"
         android:layout_height="1000000dp"
         android:layout_marginLeft="-5000px"
-        android:background="#99DE083B" />
+        android:background="@color/puzzle1translucent" />
 </FrameLayout>
