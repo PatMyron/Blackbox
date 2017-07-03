@@ -58,7 +58,7 @@ public class Puzzle1Activity extends AppCompatActivity implements SensorEventLis
         ViewGroup.MarginLayoutParams marginParams = (ViewGroup.MarginLayoutParams) fluid.getLayoutParams();
         marginParams.topMargin = deviceHeight / 2 - (int) (z / 9.8 * deviceHeight) / 2;
         Log.e("pm", String.valueOf(deviceHeight / 2 - (int) (z / 9.8 * deviceHeight) / 2));
-        fluid.setPivotX(deviceWidth / 2 + 1000);
+        fluid.setPivotX(deviceWidth / 2 + 5000);
         fluid.setPivotY(0);
         fluid.setRotation((float) Math.toDegrees(acos(y / 9.8)));
         if (x < 0) {
