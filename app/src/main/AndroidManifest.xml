@@ -26,6 +26,7 @@
         <activity android:name=".Puzzle4Activity" />
         <activity android:name=".Puzzle5Activity" />
         <activity android:name=".Puzzle6Activity" />
+        <activity android:name=".Puzzle8Activity" />
     </application>
 
 </manifest>
