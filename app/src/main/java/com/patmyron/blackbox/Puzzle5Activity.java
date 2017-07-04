@@ -27,7 +27,7 @@ public class Puzzle5Activity extends AppCompatActivity implements SensorEventLis
     protected void onResume() {
         super.onResume();
         mSensorManager = (SensorManager) getSystemService(Context.SENSOR_SERVICE);
-        mSensorManager.registerListener(this, mSensorManager.getDefaultSensor(Sensor.TYPE_PROXIMITY), SensorManager.SENSOR_DELAY_UI);
+        mSensorManager.registerListener(this, mSensorManager.getDefaultSensor(Sensor.TYPE_GRAVITY), SensorManager.SENSOR_DELAY_UI);
     }
 
     @Override
