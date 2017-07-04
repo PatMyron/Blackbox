@@ -53,8 +53,8 @@
             android:onClick="puzzleLaunch"
             android:scaleType="fitXY"
             android:src="@drawable/dot"
-            android:tag=".Puzzle10Activity"
-            android:tint="@color/puzzle10" />
+            android:tag=".puzzle9Activity"
+            android:tint="@color/puzzle9" />
 
         <ImageView
             android:layout_width="75dp"
@@ -68,29 +68,29 @@
             android:onClick="puzzleLaunch"
             android:scaleType="fitXY"
             android:src="@drawable/dot"
-            android:tag=".Puzzle12Activity"
-            android:tint="@color/puzzle12" />
-
-        <ImageButton
-            android:layout_width="75dp"
-            android:layout_height="75dp"
-            android:background="#00000000"
-            android:onClick="puzzleLaunch"
-            android:scaleType="fitXY"
-            android:src="@drawable/dot"
-            android:tag=".Puzzle12Activity"
-            android:tint="@color/puzzle12" />
-
-        <ImageButton
-            android:layout_width="75dp"
-            android:layout_height="75dp"
-            android:background="#00000000"
-            android:onClick="puzzleLaunch"
-            android:scaleType="fitXY"
-            android:src="@drawable/dot"
-            android:tag=".Puzzle11Activity"
+            android:tag=".puzzle11Activity"
             android:tint="@color/puzzle11" />
 
+        <ImageButton
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:background="#00000000"
+            android:onClick="puzzleLaunch"
+            android:scaleType="fitXY"
+            android:src="@drawable/dot"
+            android:tag=".puzzle11Activity"
+            android:tint="@color/puzzle11" />
+
+        <ImageButton
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:background="#00000000"
+            android:onClick="puzzleLaunch"
+            android:scaleType="fitXY"
+            android:src="@drawable/dot"
+            android:tag=".puzzle10Activity"
+            android:tint="@color/puzzle10" />
+
         <ImageView
             android:layout_width="75dp"
             android:layout_height="75dp"
@@ -103,8 +103,8 @@
             android:onClick="puzzleLaunch"
             android:scaleType="fitXY"
             android:src="@drawable/dot"
-            android:tag=".Puzzle10Activity"
-            android:tint="@color/puzzle10" />
+            android:tag=".puzzle9Activity"
+            android:tint="@color/puzzle9" />
 
         <ImageButton
             android:layout_width="75dp"
@@ -158,8 +158,8 @@
             android:onClick="puzzleLaunch"
             android:scaleType="fitXY"
             android:src="@drawable/dot"
-            android:tag=".Puzzle10Activity"
-            android:tint="@color/puzzle10" />
+            android:tag=".puzzle9Activity"
+            android:tint="@color/puzzle9" />
 
         <ImageButton
             android:layout_width="75dp"
