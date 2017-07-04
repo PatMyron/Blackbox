@@ -35,11 +35,6 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
 
-    @Override
-    protected void onPause() {
-        super.onPause();
-    }
-
     public void puzzleLaunch(View view) {
         Intent intent = new Intent();
         intent.setClassName(this, this.getPackageName() + view.getTag());
