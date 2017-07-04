@@ -17,7 +17,7 @@ public class Puzzle6Activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_puzzle6);
     }
-    
+
     @Override
     protected void onResume() {
         super.onResume();
