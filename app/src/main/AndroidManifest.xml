@@ -23,6 +23,7 @@
         <activity android:name=".Puzzle1Activity" />
         <activity android:name=".Puzzle2Activity" />
         <activity android:name=".Puzzle3Activity" />
+        <activity android:name=".Puzzle4Activity" />
     </application>
 
 </manifest>
