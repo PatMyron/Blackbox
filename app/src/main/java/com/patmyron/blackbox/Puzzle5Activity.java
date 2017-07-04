@@ -21,7 +21,7 @@ public class Puzzle5Activity extends AppCompatActivity implements SensorEventLis
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_puzzle5);
     }
-    
+
     @Override
     protected void onResume() {
         super.onResume();
