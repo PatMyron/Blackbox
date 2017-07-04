@@ -49,7 +49,7 @@
         android:id="@+id/fluid"
         android:layout_width="1000000dp"
         android:layout_height="1000000dp"
-        android:layout_marginLeft="100dp"
         android:layout_alignParentBottom="true"
+        android:layout_marginLeft="100dp"
         android:background="@color/puzzle3translucent" />
 </RelativeLayout>
