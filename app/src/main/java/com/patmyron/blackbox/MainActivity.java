@@ -11,27 +11,6 @@ import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-    }
-
-    @Override
-    protected void onPause() {
-        super.onPause();
-    }
-
-    public void puzzleLaunch(View view) {
-        Intent intent = new Intent();
-        intent.setClassName(this, this.getPackageName() + view.getTag());
-        this.startActivity(intent);
-        ArrayList<ImageView> ivs = getViewsByTag((ViewGroup) view.getParent(), (String) view.getTag());
-        for (ImageView iv: ivs) {
-            iv.setImageResource(R.drawable.filled);
-        }
-    }
-
     private static ArrayList<ImageView> getViewsByTag(ViewGroup root, String tag) {
         ArrayList<ImageView> views = new ArrayList<>();
         final int childCount = root.getChildCount();
@@ -48,5 +27,26 @@ public class MainActivity extends AppCompatActivity {
 
         }
         return views;
+    }
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+    }
+
+    public void puzzleLaunch(View view) {
+        Intent intent = new Intent();
+        intent.setClassName(this, this.getPackageName() + view.getTag());
+        this.startActivity(intent);
+        ArrayList<ImageView> ivs = getViewsByTag((ViewGroup) view.getParent(), (String) view.getTag());
+        for (ImageView iv : ivs) {
+            iv.setImageResource(R.drawable.filled);
+        }
     }
 }
