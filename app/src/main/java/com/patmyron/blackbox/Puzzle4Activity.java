@@ -13,7 +13,7 @@ import android.widget.RelativeLayout;
 
 public class Puzzle4Activity extends AppCompatActivity implements SensorEventListener {
 
-    SensorManager mSensorManager;
+    private SensorManager mSensorManager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

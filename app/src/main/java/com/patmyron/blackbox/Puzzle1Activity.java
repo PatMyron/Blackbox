@@ -20,7 +20,7 @@ import static java.lang.Math.acos;
 
 public class Puzzle1Activity extends AppCompatActivity implements SensorEventListener {
 
-    SensorManager mSensorManager;
+    private SensorManager mSensorManager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
