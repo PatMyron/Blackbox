@@ -19,18 +19,9 @@ public class MainActivity extends AppCompatActivity {
         super.onPause();
     }
 
-    public void puzzle1(View view) {
-        Intent intent = new Intent(this, Puzzle1Activity.class);
-        startActivity(intent);
-    }
-
-    public void puzzle2(View view) {
-        Intent intent = new Intent(this, Puzzle2Activity.class);
-        startActivity(intent);
-    }
-
-    public void puzzle3(View view) {
-        Intent intent = new Intent(this, Puzzle3Activity.class);
-        startActivity(intent);
+    public void puzzleLaunch(View view) {
+        Intent intent = new Intent();
+        intent.setClassName(this, this.getPackageName() + view.getTag());
+        this.startActivity(intent);
     }
 }
