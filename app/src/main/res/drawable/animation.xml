@@ -104,7 +104,7 @@
         android:duration="15" />
 
     <item
-        android:drawable="@drawable/blink15"
+        android:drawable="@drawable/blink25"
         android:duration="15" />
 
     <item
