@@ -17,4 +17,39 @@
         android:layout_gravity="center"
         android:background="@drawable/blink00" />
 
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:rotation="45"
+        android:src="@drawable/corner"
+        android:tint="@color/puzzle6translucent" />
+
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:rotation="-45"
+        android:src="@drawable/corner"
+        android:tint="@color/puzzle6translucent" />
+
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:rotation="-225"
+        android:src="@drawable/corner"
+        android:tint="@color/puzzle6translucent" />
+
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:rotation="225"
+        android:src="@drawable/corner"
+        android:tint="@color/puzzle6translucent" />
 </RelativeLayout>
