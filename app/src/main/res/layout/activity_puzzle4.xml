@@ -17,4 +17,14 @@
         android:layout_gravity="center"
         android:background="@drawable/blink00" />
 
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="-125dp"
+        android:src="@drawable/circle"
+        android:tint="@color/puzzle4translucent" />
+
 </RelativeLayout>
