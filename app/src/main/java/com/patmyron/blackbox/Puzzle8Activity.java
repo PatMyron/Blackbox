@@ -53,7 +53,7 @@ public class Puzzle8Activity extends AppCompatActivity {
                 }
                 if (level > 95) {
                     animation(0);
-                } else if (level == 50) {
+                } else if (level > 45 && level < 55) {
                     animation(1);
                 } else if (level < 5) {
                     animation(2);
