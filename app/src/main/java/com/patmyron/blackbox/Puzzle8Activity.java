@@ -4,9 +4,11 @@ import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
+import android.graphics.PorterDuff;
 import android.graphics.drawable.AnimationDrawable;
 import android.os.BatteryManager;
 import android.os.Bundle;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -25,6 +27,12 @@ public class Puzzle8Activity extends AppCompatActivity {
     protected void onResume() {
         super.onResume();
         batteryBroadcastReceiver();
+
+        ImageView imageView = new ImageView(this);
+        imageView.setImageResource(R.drawable.circle);
+        imageView.setColorFilter(ContextCompat.getColor(this, R.color.puzzle8), PorterDuff.Mode.ADD);
+        imageView.setLayoutParams(new LinearLayout.LayoutParams(100, 100));
+        ((LinearLayout) findViewById(R.id.ll)).addView(imageView);
     }
 
     @Override
