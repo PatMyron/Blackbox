@@ -10,6 +10,7 @@ import android.os.BatteryManager;
 import android.os.Bundle;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
+import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 
@@ -32,7 +33,7 @@ public class Puzzle8Activity extends AppCompatActivity {
         imageView.setImageResource(R.drawable.circle);
         imageView.setColorFilter(ContextCompat.getColor(this, R.color.puzzle8), PorterDuff.Mode.ADD);
         imageView.setLayoutParams(new LinearLayout.LayoutParams(100, 100));
-        ((LinearLayout) findViewById(R.id.ll)).addView(imageView);
+        ((FrameLayout) findViewById(R.id.merge)).addView(imageView);
     }
 
     @Override
