@@ -13,6 +13,8 @@ import android.widget.LinearLayout;
 
 public class Puzzle8Activity extends AppCompatActivity {
 
+    private BroadcastReceiver receiver;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -25,10 +27,15 @@ public class Puzzle8Activity extends AppCompatActivity {
         batteryBroadcastReceiver();
     }
 
+    @Override
+    protected void onPause() {
+        super.onPause();
+        unregisterReceiver(receiver);
+    }
+
     private void batteryBroadcastReceiver() {
-        BroadcastReceiver batteryLevelReceiver = new BroadcastReceiver() {
+        receiver = new BroadcastReceiver() {
             public void onReceive(Context context, Intent intent) {
-                context.unregisterReceiver(this);
                 int rawLevel = intent.getIntExtra(BatteryManager.EXTRA_LEVEL, -1);
                 int scale = intent.getIntExtra(BatteryManager.EXTRA_SCALE, -1);
                 int level = -1;
@@ -45,7 +52,7 @@ public class Puzzle8Activity extends AppCompatActivity {
             }
         };
         IntentFilter batteryLevelFilter = new IntentFilter(Intent.ACTION_BATTERY_CHANGED);
-        registerReceiver(batteryLevelReceiver, batteryLevelFilter);
+        registerReceiver(receiver, batteryLevelFilter);
     }
 
     private void animation(int index) {
