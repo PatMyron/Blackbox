@@ -20,16 +20,15 @@
     <ImageView
         android:layout_width="200dp"
         android:layout_height="200dp"
-        android:tint="@color/puzzle5"
+        android:layout_above="@+id/imageView1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="-45dp"
         android:scaleType="fitXY"
         android:src="@drawable/wifi"
-        android:layout_above="@+id/imageView1"
-        android:layout_marginBottom="-45dp"
-        android:layout_centerHorizontal="true" />
+        android:tint="@color/puzzle5" />
 
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/puzzle5translucent"
-        />
+        android:background="@color/puzzle5translucent" />
 </RelativeLayout>
