@@ -12,6 +12,8 @@ import android.widget.RelativeLayout;
 
 public class Puzzle6Activity extends AppCompatActivity {
 
+    private BroadcastReceiver receiver;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -24,8 +26,14 @@ public class Puzzle6Activity extends AppCompatActivity {
         screenshotBroadcastReceiver();
     }
 
+    @Override
+    protected void onPause() {
+        super.onPause();
+        unregisterReceiver(receiver);
+    }
+
     private void screenshotBroadcastReceiver() {
-        BroadcastReceiver receiver = new BroadcastReceiver() {
+        receiver = new BroadcastReceiver() {
             public void onReceive(Context context, Intent intent) {
                 context.unregisterReceiver(this);
                 animation(0);
