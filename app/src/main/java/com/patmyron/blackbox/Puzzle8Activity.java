@@ -35,11 +35,11 @@ public class Puzzle8Activity extends AppCompatActivity {
                 if (rawLevel >= 0 && scale > 0) {
                     level = (rawLevel * 100) / scale;
                 }
-                if (level > 98) {
+                if (level > 95) {
                     animation(0);
                 } else if (level == 50) {
                     animation(1);
-                } else if (level < 3) {
+                } else if (level < 5) {
                     animation(2);
                 }
             }
