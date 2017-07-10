@@ -4,19 +4,24 @@ import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
-import android.graphics.PorterDuff;
 import android.graphics.drawable.AnimationDrawable;
 import android.os.BatteryManager;
 import android.os.Bundle;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
-import android.widget.FrameLayout;
+import android.util.DisplayMetrics;
+import android.view.View;
+import android.view.WindowManager;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 
 public class Puzzle8Activity extends AppCompatActivity {
 
     private BroadcastReceiver receiver;
+    private double ballSize = 100.0;
+    private int deviceHeight;
+    private int deviceWidth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,11 +34,34 @@ public class Puzzle8Activity extends AppCompatActivity {
         super.onResume();
         batteryBroadcastReceiver();
 
-        ImageView imageView = new ImageView(this);
-        imageView.setImageResource(R.drawable.circle);
-        imageView.setColorFilter(ContextCompat.getColor(this, R.color.puzzle8), PorterDuff.Mode.ADD);
-        imageView.setLayoutParams(new LinearLayout.LayoutParams(100, 100));
-        ((FrameLayout) findViewById(R.id.merge)).addView(imageView);
+        DisplayMetrics displayMetrics = new DisplayMetrics();
+        WindowManager windowManager = (WindowManager) getApplicationContext().getSystemService(Context.WINDOW_SERVICE);
+        windowManager.getDefaultDisplay().getMetrics(displayMetrics);
+        deviceHeight = displayMetrics.heightPixels;
+        deviceWidth = displayMetrics.widthPixels;
+    }
+
+    private void recurse(ImageView imageView, int rowNumber, int columnNumber, int batteryLevel) {
+        if (columnNumber < (deviceWidth / ballSize) - 1) {
+            ImageView imageView2 = new ImageView(this);
+            imageView.setId(View.generateViewId());
+            imageView2.setImageResource(R.drawable.circle);
+            int color = (batteryLevel > 25) ? R.color.puzzle8 : R.color.puzzle8b;
+            imageView2.setColorFilter(ContextCompat.getColor(this, color));
+            RelativeLayout.LayoutParams params2 = new RelativeLayout.LayoutParams((int) ballSize, (int) ballSize);
+            params2.addRule(RelativeLayout.ALIGN_PARENT_BOTTOM);
+            params2.bottomMargin = (int) (rowNumber * ballSize);
+            if ((columnNumber % (int) ((deviceWidth / ballSize))) == 0) {
+                params2.leftMargin = (int) ballSize / 2 * (rowNumber % 2);
+            }
+            if (columnNumber != 0) {
+                params2.addRule(RelativeLayout.END_OF, imageView.getId());
+            }
+            imageView2.setLayoutParams(params2);
+            ((RelativeLayout) findViewById(R.id.merge)).addView(imageView2, 0);
+            recurse(imageView2, rowNumber, columnNumber + 1, batteryLevel);
+        }
+
     }
 
     @Override
@@ -57,6 +85,10 @@ public class Puzzle8Activity extends AppCompatActivity {
                     animation(1);
                 } else if (level < 5) {
                     animation(2);
+                }
+                ImageView imageView = new ImageView(context);
+                for (int i = 0; i < ((deviceHeight / ballSize) - 1) * level / 100.0; i++) {
+                    recurse(imageView, i, 0, level);
                 }
             }
         };
