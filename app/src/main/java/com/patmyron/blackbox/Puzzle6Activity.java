@@ -35,7 +35,6 @@ public class Puzzle6Activity extends AppCompatActivity {
     private void screenshotBroadcastReceiver() {
         receiver = new BroadcastReceiver() {
             public void onReceive(Context context, Intent intent) {
-                context.unregisterReceiver(this);
                 animation(0);
             }
         };
