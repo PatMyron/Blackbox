@@ -8,13 +8,12 @@ import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.util.DisplayMetrics;
 import android.util.Log;
 import android.view.ViewGroup;
-import android.view.WindowManager;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 
+import static com.patmyron.blackbox.MainActivity.getDeviceHeightAndWidth;
 import static java.lang.Math.acos;
 
 
@@ -50,11 +49,8 @@ public class Puzzle1Activity extends AppCompatActivity implements SensorEventLis
         float x = event.values[0];
         float y = event.values[1];
         float z = event.values[2];
-        DisplayMetrics displayMetrics = new DisplayMetrics();
-        WindowManager windowManager = (WindowManager) getApplicationContext().getSystemService(Context.WINDOW_SERVICE);
-        windowManager.getDefaultDisplay().getMetrics(displayMetrics);
-        int deviceWidth = displayMetrics.widthPixels;
-        int deviceHeight = displayMetrics.heightPixels;
+        int deviceHeight = getDeviceHeightAndWidth(getApplicationContext()).first;
+        int deviceWidth = getDeviceHeightAndWidth(getApplicationContext()).second;
         ViewGroup.MarginLayoutParams marginParams = (ViewGroup.MarginLayoutParams) fluid.getLayoutParams();
         marginParams.topMargin = deviceHeight / 2;
         Log.e("pm", String.valueOf(deviceHeight / 2 - (int) (z / 9.8 * deviceHeight) / 2));

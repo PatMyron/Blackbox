@@ -18,6 +18,8 @@ import android.widget.LinearLayout;
 
 import java.io.IOException;
 
+import static com.patmyron.blackbox.MainActivity.getDeviceHeightAndWidth;
+
 public class Puzzle9Activity extends AppCompatActivity implements SensorEventListener {
 
     private SensorManager mSensorManager;
@@ -64,6 +66,8 @@ public class Puzzle9Activity extends AppCompatActivity implements SensorEventLis
             } else if (amp < 1000) {
                 animation(2);
             }
+            int deviceHeight = getDeviceHeightAndWidth(getApplicationContext()).first;
+            int deviceWidth = getDeviceHeightAndWidth(getApplicationContext()).second;
         }
     }
 

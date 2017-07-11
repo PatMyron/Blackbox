@@ -9,11 +9,11 @@ import android.hardware.SensorManager;
 import android.media.AudioManager;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.util.DisplayMetrics;
 import android.view.ViewGroup;
-import android.view.WindowManager;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
+
+import static com.patmyron.blackbox.MainActivity.getDeviceHeightAndWidth;
 
 public class Puzzle3Activity extends AppCompatActivity implements SensorEventListener {
 
@@ -58,10 +58,7 @@ public class Puzzle3Activity extends AppCompatActivity implements SensorEventLis
         }
 
         ImageView fluid = (ImageView) findViewById(R.id.fluid);
-        DisplayMetrics displayMetrics = new DisplayMetrics();
-        WindowManager windowManager = (WindowManager) getApplicationContext().getSystemService(Context.WINDOW_SERVICE);
-        windowManager.getDefaultDisplay().getMetrics(displayMetrics);
-        int deviceHeight = displayMetrics.heightPixels;
+        int deviceHeight = getDeviceHeightAndWidth(getApplicationContext()).first;
         ViewGroup.MarginLayoutParams params = (ViewGroup.MarginLayoutParams) fluid.getLayoutParams();
         params.height = (int) (deviceHeight * ((double) media / am.getStreamMaxVolume(AudioManager.STREAM_MUSIC)));
         fluid.setLayoutParams(params);

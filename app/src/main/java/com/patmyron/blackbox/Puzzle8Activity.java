@@ -9,20 +9,18 @@ import android.os.BatteryManager;
 import android.os.Bundle;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
-import android.util.DisplayMetrics;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.WindowManager;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
+
+import static com.patmyron.blackbox.MainActivity.getDeviceHeightAndWidth;
 
 public class Puzzle8Activity extends AppCompatActivity {
 
     private BroadcastReceiver receiver;
     private double ballSize = 100.0;
-    private int deviceHeight;
-    private int deviceWidth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,15 +32,10 @@ public class Puzzle8Activity extends AppCompatActivity {
     protected void onResume() {
         super.onResume();
         batteryBroadcastReceiver();
-
-        DisplayMetrics displayMetrics = new DisplayMetrics();
-        WindowManager windowManager = (WindowManager) getApplicationContext().getSystemService(Context.WINDOW_SERVICE);
-        windowManager.getDefaultDisplay().getMetrics(displayMetrics);
-        deviceHeight = displayMetrics.heightPixels;
-        deviceWidth = displayMetrics.widthPixels;
     }
 
     private void recurse(ImageView imageView, int rowNumber, int columnNumber, int batteryLevel) {
+        int deviceWidth = getDeviceHeightAndWidth(getApplicationContext()).second;
         if (columnNumber < (deviceWidth / ballSize) - 1) {
             ImageView imageView2 = new ImageView(this);
             imageView2.setId(View.generateViewId());
@@ -89,6 +82,7 @@ public class Puzzle8Activity extends AppCompatActivity {
                 }
                 ImageView imageView = new ImageView(context);
                 ((ViewGroup) findViewById(R.id.merge)).removeAllViews();
+                int deviceHeight = getDeviceHeightAndWidth(getApplicationContext()).first;
                 for (int i = 0; i < ((deviceHeight / ballSize) - 1) * level / 100.0; i++) {
                     recurse(imageView, i, 0, level);
                 }
