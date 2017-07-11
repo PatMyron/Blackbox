@@ -11,6 +11,7 @@ import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.util.DisplayMetrics;
 import android.view.View;
+import android.view.ViewGroup;
 import android.view.WindowManager;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -44,7 +45,7 @@ public class Puzzle8Activity extends AppCompatActivity {
     private void recurse(ImageView imageView, int rowNumber, int columnNumber, int batteryLevel) {
         if (columnNumber < (deviceWidth / ballSize) - 1) {
             ImageView imageView2 = new ImageView(this);
-            imageView.setId(View.generateViewId());
+            imageView2.setId(View.generateViewId());
             imageView2.setImageResource(R.drawable.circle);
             int color = (batteryLevel > 25) ? R.color.puzzle8 : R.color.puzzle8b;
             imageView2.setColorFilter(ContextCompat.getColor(this, color));
@@ -87,6 +88,7 @@ public class Puzzle8Activity extends AppCompatActivity {
                     animation(2);
                 }
                 ImageView imageView = new ImageView(context);
+                ((ViewGroup) findViewById(R.id.merge)).removeAllViews();
                 for (int i = 0; i < ((deviceHeight / ballSize) - 1) * level / 100.0; i++) {
                     recurse(imageView, i, 0, level);
                 }
