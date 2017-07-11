@@ -146,10 +146,15 @@
             android:tag=".Puzzle8Activity"
             android:tint="@color/puzzle8" />
 
-        <ImageView
+        <ImageButton
             android:layout_width="75dp"
             android:layout_height="75dp"
-            android:background="#00000000" />
+            android:background="#00000000"
+            android:onClick="puzzleLaunch"
+            android:scaleType="fitXY"
+            android:src="@drawable/dot"
+            android:tag=".Puzzle29Activity"
+            android:tint="@color/puzzle29" />
 
         <ImageButton
             android:layout_width="75dp"
