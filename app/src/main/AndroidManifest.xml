@@ -31,6 +31,8 @@
         <activity android:name=".Puzzle9Activity" />
         <activity android:name=".Puzzle10Activity" />
         <activity android:name=".Puzzle11Activity" />
+        <activity android:name=".Puzzle17Activity" />
+        <activity android:name=".Puzzle20Activity" />
     </application>
 
 </manifest>
