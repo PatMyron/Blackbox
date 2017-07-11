@@ -12,9 +12,12 @@ import android.media.MediaRecorder;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v4.app.ActivityCompat;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
+import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 
 import java.io.IOException;
 
@@ -24,6 +27,7 @@ public class Puzzle9Activity extends AppCompatActivity implements SensorEventLis
 
     private SensorManager mSensorManager;
     private SoundMeter sm;
+    private int ballSize = 300;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -68,6 +72,17 @@ public class Puzzle9Activity extends AppCompatActivity implements SensorEventLis
             }
             int deviceHeight = getDeviceHeightAndWidth(getApplicationContext()).first;
             int deviceWidth = getDeviceHeightAndWidth(getApplicationContext()).second;
+            ((ViewGroup) findViewById(R.id.merge)).removeAllViews();
+            for (int i = 0; i < amp / 3000; i++) {
+                ImageView imageView = new ImageView(this);
+                imageView.setImageResource(R.drawable.circle);
+                imageView.setColorFilter(ContextCompat.getColor(this, R.color.puzzle9translucent));
+                RelativeLayout.LayoutParams params = new RelativeLayout.LayoutParams(ballSize, ballSize);
+                params.topMargin = (int) (Math.random() * (deviceHeight - ballSize));
+                params.leftMargin = (int) (Math.random() * (deviceWidth - ballSize));
+                imageView.setLayoutParams(params);
+                ((RelativeLayout) findViewById(R.id.merge)).addView(imageView, 0);
+            }
         }
     }
 

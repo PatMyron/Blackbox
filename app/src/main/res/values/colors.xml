@@ -19,6 +19,7 @@
     <color name="puzzle8">#7BD207</color>
     <color name="puzzle8b">#E64E39</color>
     <color name="puzzle9">#67B7F1</color>
+    <color name="puzzle9translucent">#9967B7F1</color>
     <color name="puzzle10">#6937FB</color>
     <color name="puzzle11">#BD5682</color>
 </resources>
