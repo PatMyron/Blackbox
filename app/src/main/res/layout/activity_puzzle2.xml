@@ -81,8 +81,10 @@
     <View
         android:layout_width="9dp"
         android:layout_height="70dp"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="148dp"
+        android:layout_below="@id/anchor"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="25dp"
+        android:layout_toLeftOf="@id/anchor"
         android:background="@color/puzzle2"
         android:rotation="45"
         android:transformPivotX="4.5dp"
