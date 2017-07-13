@@ -38,4 +38,83 @@
         android:src="@drawable/sunny"
         android:tint="@color/puzzle2" />
 
+    <View
+        android:id="@+id/anchor"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="148dp" />
+
+    <View
+        android:layout_width="9dp"
+        android:layout_height="70dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="115dp"
+        android:background="@color/puzzle2"
+        android:rotation="180"
+        android:transformPivotX="4.5dp"
+        android:transformPivotY="0dp" />
+
+    <View
+        android:layout_width="9dp"
+        android:layout_height="70dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="181dp"
+        android:background="@color/puzzle2" />
+
+    <View
+        android:layout_width="70dp"
+        android:layout_height="9dp"
+        android:layout_marginRight="33dp"
+        android:layout_marginTop="143dp"
+        android:layout_toLeftOf="@id/anchor"
+        android:background="@color/puzzle2" />
+
+    <View
+        android:layout_width="70dp"
+        android:layout_height="9dp"
+        android:layout_marginLeft="33dp"
+        android:layout_marginTop="143dp"
+        android:layout_toRightOf="@id/anchor"
+        android:background="@color/puzzle2" />
+
+    <View
+        android:layout_width="9dp"
+        android:layout_height="70dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="148dp"
+        android:background="@color/puzzle2"
+        android:rotation="45"
+        android:transformPivotX="4.5dp"
+        android:transformPivotY="0dp" />
+
+    <View
+        android:layout_width="9dp"
+        android:layout_height="70dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="148dp"
+        android:background="@color/puzzle2"
+        android:rotation="135"
+        android:transformPivotX="4.5dp"
+        android:transformPivotY="0dp" />
+
+    <View
+        android:layout_width="9dp"
+        android:layout_height="70dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="148dp"
+        android:background="@color/puzzle2"
+        android:rotation="225"
+        android:transformPivotX="4.5dp"
+        android:transformPivotY="0dp" />
+
+    <View
+        android:layout_width="9dp"
+        android:layout_height="70dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="148dp"
+        android:background="@color/puzzle2"
+        android:rotation="315"
+        android:transformPivotX="4.5dp"
+        android:transformPivotY="0dp" />
 </RelativeLayout>
