@@ -9,8 +9,13 @@ import android.hardware.SensorManager;
 import android.os.Bundle;
 import android.provider.Settings;
 import android.support.v7.app.AppCompatActivity;
+import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
+
+import java.util.ArrayList;
+
+import static com.patmyron.blackbox.MainActivity.getViewsByTag;
 
 public class Puzzle2Activity extends AppCompatActivity implements SensorEventListener {
 
@@ -50,6 +55,12 @@ public class Puzzle2Activity extends AppCompatActivity implements SensorEventLis
             animation(0);
         } else if (brightness > 250) {
             animation(1);
+        }
+        ArrayList<ImageView> rays = getViewsByTag((ViewGroup) findViewById(R.id.ll), "rays");
+        for (ImageView ray : rays) {
+            ViewGroup.LayoutParams layoutParams = ray.getLayoutParams();
+            layoutParams.height = (int) (100 * (brightness / 255.0));
+            ray.setLayoutParams(layoutParams);
         }
     }
 

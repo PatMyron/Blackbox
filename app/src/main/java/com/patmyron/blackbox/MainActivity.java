@@ -18,7 +18,7 @@ import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
 
-    private static ArrayList<ImageView> getViewsByTag(ViewGroup root, String tag) {
+    static ArrayList<ImageView> getViewsByTag(ViewGroup root, String tag) {
         ArrayList<ImageView> views = new ArrayList<>();
         final int childCount = root.getChildCount();
         for (int i = 0; i < childCount; i++) {

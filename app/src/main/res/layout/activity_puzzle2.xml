@@ -38,91 +38,105 @@
         android:src="@drawable/sunny"
         android:tint="@color/puzzle2" />
 
-    <View
+    <ImageView
         android:id="@+id/anchor"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="148dp" />
 
-    <View
+    <ImageView
         android:layout_width="9dp"
-        android:layout_height="70dp"
+        android:layout_height="40dp"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="115dp"
         android:background="@color/puzzle2"
         android:rotation="180"
+        android:tag="rays"
         android:transformPivotX="4.5dp"
         android:transformPivotY="0dp" />
 
-    <View
+    <ImageView
         android:layout_width="9dp"
-        android:layout_height="70dp"
+        android:layout_height="40dp"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="181dp"
-        android:background="@color/puzzle2" />
+        android:background="@color/puzzle2"
+        android:tag="rays" />
 
-    <View
-        android:layout_width="70dp"
-        android:layout_height="9dp"
-        android:layout_marginRight="33dp"
-        android:layout_marginTop="143dp"
-        android:layout_toLeftOf="@id/anchor"
-        android:background="@color/puzzle2" />
-
-    <View
-        android:layout_width="70dp"
-        android:layout_height="9dp"
-        android:layout_marginLeft="33dp"
-        android:layout_marginTop="143dp"
-        android:layout_toRightOf="@id/anchor"
-        android:background="@color/puzzle2" />
-
-    <View
+    <ImageView
         android:layout_width="9dp"
-        android:layout_height="70dp"
+        android:layout_height="40dp"
+        android:layout_marginRight="29dp"
+        android:layout_marginTop="148dp"
+        android:layout_toLeftOf="@id/anchor"
+        android:background="@color/puzzle2"
+        android:rotation="90"
+        android:tag="rays"
+        android:transformPivotX="4.5dp"
+        android:transformPivotY="0dp" />
+
+    <ImageView
+        android:layout_width="9dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="29dp"
+        android:layout_marginTop="148dp"
+        android:layout_toRightOf="@id/anchor"
+        android:background="@color/puzzle2"
+        android:rotation="270"
+        android:tag="rays"
+        android:transformPivotX="4.5dp"
+        android:transformPivotY="0dp" />
+
+    <ImageView
+        android:layout_width="9dp"
+        android:layout_height="40dp"
         android:layout_below="@id/anchor"
         android:layout_marginRight="20dp"
         android:layout_marginTop="25dp"
         android:layout_toLeftOf="@id/anchor"
         android:background="@color/puzzle2"
         android:rotation="45"
+        android:tag="rays"
         android:transformPivotX="4.5dp"
         android:transformPivotY="0dp" />
 
-    <View
+    <ImageView
         android:layout_width="9dp"
-        android:layout_height="70dp"
+        android:layout_height="40dp"
         android:layout_below="@id/anchor"
         android:layout_marginRight="20dp"
         android:layout_marginTop="-25dp"
         android:layout_toLeftOf="@id/anchor"
         android:background="@color/puzzle2"
         android:rotation="135"
+        android:tag="rays"
         android:transformPivotX="4.5dp"
         android:transformPivotY="0dp" />
 
-    <View
+    <ImageView
         android:layout_width="9dp"
-        android:layout_height="70dp"
+        android:layout_height="40dp"
         android:layout_below="@id/anchor"
         android:layout_marginLeft="20dp"
         android:layout_marginTop="-25dp"
         android:layout_toRightOf="@id/anchor"
         android:background="@color/puzzle2"
         android:rotation="225"
+        android:tag="rays"
         android:transformPivotX="4.5dp"
         android:transformPivotY="0dp" />
 
-    <View
+    <ImageView
         android:layout_width="9dp"
-        android:layout_height="70dp"
+        android:layout_height="40dp"
         android:layout_below="@id/anchor"
         android:layout_marginLeft="20dp"
         android:layout_marginTop="25dp"
         android:layout_toRightOf="@id/anchor"
         android:background="@color/puzzle2"
         android:rotation="315"
+        android:tag="rays"
         android:transformPivotX="4.5dp"
         android:transformPivotY="0dp" />
 </RelativeLayout>
