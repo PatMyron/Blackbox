@@ -46,7 +46,7 @@
         android:layout_marginTop="148dp" />
 
     <ImageView
-        android:layout_width="10dp"
+        android:layout_width="9dp"
         android:layout_height="40dp"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="115dp"
@@ -57,7 +57,7 @@
         android:transformPivotY="0dp" />
 
     <ImageView
-        android:layout_width="10dp"
+        android:layout_width="9dp"
         android:layout_height="40dp"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="181dp"
@@ -65,7 +65,7 @@
         android:tag="rays" />
 
     <ImageView
-        android:layout_width="10dp"
+        android:layout_width="9dp"
         android:layout_height="40dp"
         android:layout_marginRight="29dp"
         android:layout_marginTop="148dp"
@@ -77,7 +77,7 @@
         android:transformPivotY="0dp" />
 
     <ImageView
-        android:layout_width="10dp"
+        android:layout_width="9dp"
         android:layout_height="40dp"
         android:layout_marginLeft="29dp"
         android:layout_marginTop="148dp"
@@ -89,7 +89,7 @@
         android:transformPivotY="0dp" />
 
     <ImageView
-        android:layout_width="10dp"
+        android:layout_width="9dp"
         android:layout_height="40dp"
         android:layout_below="@id/anchor"
         android:layout_marginRight="20dp"
@@ -102,7 +102,7 @@
         android:transformPivotY="0dp" />
 
     <ImageView
-        android:layout_width="10dp"
+        android:layout_width="9dp"
         android:layout_height="40dp"
         android:layout_below="@id/anchor"
         android:layout_marginRight="20dp"
@@ -115,7 +115,7 @@
         android:transformPivotY="0dp" />
 
     <ImageView
-        android:layout_width="10dp"
+        android:layout_width="9dp"
         android:layout_height="40dp"
         android:layout_below="@id/anchor"
         android:layout_marginLeft="20dp"
@@ -128,7 +128,7 @@
         android:transformPivotY="0dp" />
 
     <ImageView
-        android:layout_width="10dp"
+        android:layout_width="9dp"
         android:layout_height="40dp"
         android:layout_below="@id/anchor"
         android:layout_marginLeft="20dp"
