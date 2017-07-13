@@ -4,6 +4,7 @@
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
     <color name="bg">#000000</color>
+    <color name="transparent">#00000000</color>
     <color name="puzzle1">#DE083B</color>
     <color name="puzzle1translucent">#99DE083B</color>
     <color name="puzzle2">#FFC837</color>

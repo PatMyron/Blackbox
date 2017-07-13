@@ -18,13 +18,14 @@
         android:background="@drawable/blink00" />
 
     <ImageView
+        android:id="@+id/wifi"
         android:layout_width="200dp"
         android:layout_height="200dp"
         android:layout_above="@+id/imageView1"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="-45dp"
         android:scaleType="fitXY"
-        android:src="@drawable/wifi"
+        android:background="@drawable/wifi"
         android:tint="@color/puzzle5" />
 
     <ImageView
