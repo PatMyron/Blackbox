@@ -18,6 +18,8 @@ import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
 
+    private ArrayList<String> tags = new ArrayList<>();
+
     static ArrayList<ImageView> getViewsByTag(ViewGroup root, String tag) {
         ArrayList<ImageView> views = new ArrayList<>();
         final int childCount = root.getChildCount();
@@ -54,13 +56,21 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    @Override
+    protected void onResume() {
+        super.onResume();
+        for (String tag : tags) {
+            ArrayList<ImageView> ivs = getViewsByTag((ViewGroup) findViewById(R.id.ll), tag);
+            for (ImageView iv : ivs) {
+                iv.setImageResource(R.drawable.filled);
+            }
+        }
+    }
+
     public void puzzleLaunch(View view) {
         Intent intent = new Intent();
         intent.setClassName(this, this.getPackageName() + view.getTag());
         this.startActivity(intent);
-        ArrayList<ImageView> ivs = getViewsByTag((ViewGroup) view.getParent(), (String) view.getTag());
-        for (ImageView iv : ivs) {
-            iv.setImageResource(R.drawable.filled);
-        }
+        tags.add((String) view.getTag());
     }
 }
