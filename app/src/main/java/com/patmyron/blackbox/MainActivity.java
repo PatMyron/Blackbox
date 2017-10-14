@@ -18,7 +18,7 @@ import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
 
-    private ArrayList<String> tags = new ArrayList<>();
+    private final ArrayList<String> tags = new ArrayList<>();
 
     static ArrayList<ImageView> getViewsByTag(ViewGroup root, String tag) {
         ArrayList<ImageView> views = new ArrayList<>();

@@ -27,7 +27,7 @@ public class Puzzle9Activity extends AppCompatActivity implements SensorEventLis
 
     private SensorManager mSensorManager;
     private SoundMeter sm;
-    private int ballSize = 300;
+    private final int ballSize = 300;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

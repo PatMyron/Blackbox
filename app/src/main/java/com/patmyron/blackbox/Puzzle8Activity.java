@@ -20,7 +20,7 @@ import static com.patmyron.blackbox.MainActivity.getDeviceHeightAndWidth;
 public class Puzzle8Activity extends AppCompatActivity {
 
     private BroadcastReceiver receiver;
-    private double ballSize = 100.0;
+    private final double ballSize = 100.0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
