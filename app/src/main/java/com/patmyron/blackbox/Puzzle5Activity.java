@@ -42,7 +42,7 @@ public class Puzzle5Activity extends AppCompatActivity implements SensorEventLis
     public void onSensorChanged(SensorEvent event) {
         if (Settings.Global.getInt(getContentResolver(), Settings.Global.AIRPLANE_MODE_ON, 0) == 1) {
             animation(0);
-            ImageView imageView = (ImageView) findViewById(R.id.wifi);
+            ImageView imageView = findViewById(R.id.wifi);
             imageView.setBackgroundResource(R.drawable.animationwifi);
             ((AnimationDrawable) imageView.getBackground()).start();
         }

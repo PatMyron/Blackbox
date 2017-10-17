@@ -45,7 +45,7 @@ public class Puzzle1Activity extends AppCompatActivity implements SensorEventLis
     }
 
     public void onSensorChanged(SensorEvent event) {
-        ImageView fluid = (ImageView) findViewById(R.id.fluid);
+        ImageView fluid = findViewById(R.id.fluid);
         float x = event.values[0];
         float y = event.values[1];
         float z = event.values[2];
@@ -83,7 +83,7 @@ public class Puzzle1Activity extends AppCompatActivity implements SensorEventLis
         } else if (z > 9.7) {
             animation(5);
         }
-        ViewGroup vg = (ViewGroup) findViewById(R.id.ll);
+        ViewGroup vg = findViewById(R.id.ll);
         vg.invalidate();
     }
 

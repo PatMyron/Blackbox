@@ -57,7 +57,7 @@ public class Puzzle3Activity extends AppCompatActivity implements SensorEventLis
             animation(0);
         }
 
-        ImageView fluid = (ImageView) findViewById(R.id.fluid);
+        ImageView fluid = findViewById(R.id.fluid);
         int deviceHeight = getDeviceHeightAndWidth(getApplicationContext()).first;
         ViewGroup.MarginLayoutParams params = (ViewGroup.MarginLayoutParams) fluid.getLayoutParams();
         params.height = (int) (deviceHeight * ((double) media / am.getStreamMaxVolume(AudioManager.STREAM_MUSIC)));
