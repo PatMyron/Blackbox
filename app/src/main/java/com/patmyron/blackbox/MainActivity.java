@@ -1,9 +1,11 @@
 package com.patmyron.blackbox;
 
 import android.Manifest;
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.graphics.drawable.AnimationDrawable;
 import android.os.Bundle;
 import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AppCompatActivity;
@@ -13,6 +15,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.WindowManager;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
 
 import java.util.ArrayList;
 
@@ -72,5 +75,11 @@ public class MainActivity extends AppCompatActivity {
         intent.setClassName(this, this.getPackageName() + view.getTag());
         this.startActivity(intent);
         tags.add((String) view.getTag());
+    }
+
+    public static void animation(Activity activity, int index) {
+        ImageView iv = (ImageView) ((RelativeLayout) activity.findViewById(R.id.ll)).getChildAt(index);
+        iv.setBackgroundResource(R.drawable.animation);
+        ((AnimationDrawable) iv.getBackground()).start();
     }
 }
