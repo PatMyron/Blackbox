@@ -1,7 +1,6 @@
 package com.patmyron.blackbox;
 
 import android.content.Context;
-import android.graphics.drawable.AnimationDrawable;
 import android.hardware.Sensor;
 import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
@@ -11,10 +10,10 @@ import android.provider.Settings;
 import android.support.v7.app.AppCompatActivity;
 import android.view.ViewGroup;
 import android.widget.ImageView;
-import android.widget.RelativeLayout;
 
 import java.util.ArrayList;
 
+import static com.patmyron.blackbox.MainActivity.animation;
 import static com.patmyron.blackbox.MainActivity.getViewsByTag;
 
 public class Puzzle2Activity extends AppCompatActivity implements SensorEventListener {
@@ -52,9 +51,9 @@ public class Puzzle2Activity extends AppCompatActivity implements SensorEventLis
             e.printStackTrace();
         }
         if (brightness < 5) {
-            animation(0);
+            animation(this, 0);
         } else if (brightness > 250) {
-            animation(1);
+            animation(this, 1);
         }
         ArrayList<ImageView> rays = getViewsByTag((ViewGroup) findViewById(R.id.ll), "rays");
         for (ImageView ray : rays) {
@@ -63,11 +62,4 @@ public class Puzzle2Activity extends AppCompatActivity implements SensorEventLis
             ray.setLayoutParams(layoutParams);
         }
     }
-
-    private void animation(int index) {
-        ImageView iv = (ImageView) ((RelativeLayout) findViewById(R.id.ll)).getChildAt(index);
-        iv.setBackgroundResource(R.drawable.animation);
-        ((AnimationDrawable) iv.getBackground()).start();
-    }
-
 }

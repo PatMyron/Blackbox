@@ -1,7 +1,6 @@
 package com.patmyron.blackbox;
 
 import android.content.Context;
-import android.graphics.drawable.AnimationDrawable;
 import android.hardware.Sensor;
 import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
@@ -11,8 +10,8 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.ViewGroup;
 import android.widget.ImageView;
-import android.widget.RelativeLayout;
 
+import static com.patmyron.blackbox.MainActivity.animation;
 import static com.patmyron.blackbox.MainActivity.getDeviceHeightAndWidth;
 
 public class Puzzle3Activity extends AppCompatActivity implements SensorEventListener {
@@ -45,16 +44,16 @@ public class Puzzle3Activity extends AppCompatActivity implements SensorEventLis
     public void onSensorChanged(SensorEvent event) {
         AudioManager am = (AudioManager) getSystemService(Context.AUDIO_SERVICE);
         if (am.isWiredHeadsetOn()) {
-            animation(2);
+            animation(this, 2);
         }
         if (am.getRingerMode() == AudioManager.RINGER_MODE_SILENT) {
-            animation(3);
+            animation(this, 3);
         }
         int media = am.getStreamVolume(AudioManager.STREAM_RING);
         if (media < 1) {
-            animation(1);
+            animation(this, 1);
         } else if (media == am.getStreamMaxVolume(AudioManager.STREAM_MUSIC)) {
-            animation(0);
+            animation(this, 0);
         }
 
         ImageView fluid = findViewById(R.id.fluid);
@@ -62,11 +61,5 @@ public class Puzzle3Activity extends AppCompatActivity implements SensorEventLis
         ViewGroup.MarginLayoutParams params = (ViewGroup.MarginLayoutParams) fluid.getLayoutParams();
         params.height = (int) (deviceHeight * ((double) media / am.getStreamMaxVolume(AudioManager.STREAM_MUSIC)));
         fluid.setLayoutParams(params);
-    }
-
-    private void animation(int index) {
-        ImageView iv = (ImageView) ((RelativeLayout) findViewById(R.id.ll)).getChildAt(index);
-        iv.setBackgroundResource(R.drawable.animation);
-        ((AnimationDrawable) iv.getBackground()).start();
     }
 }

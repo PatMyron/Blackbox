@@ -1,7 +1,6 @@
 package com.patmyron.blackbox;
 
 import android.content.Context;
-import android.graphics.drawable.AnimationDrawable;
 import android.hardware.Sensor;
 import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
@@ -11,8 +10,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.ViewGroup;
 import android.widget.ImageView;
-import android.widget.RelativeLayout;
 
+import static com.patmyron.blackbox.MainActivity.animation;
 import static com.patmyron.blackbox.MainActivity.getDeviceHeightAndWidth;
 import static java.lang.Math.acos;
 
@@ -69,28 +68,21 @@ public class Puzzle1Activity extends AppCompatActivity implements SensorEventLis
         }
 
         if (x < -9.7) {
-            animation(0);
+            animation(this, 0);
         } else if (x > 9.7) {
-            animation(1);
+            animation(this, 1);
         }
         if (y < -9.7) {
-            animation(2);
+            animation(this, 2);
         } else if (y > 9.7) {
-            animation(3);
+            animation(this, 3);
         }
         if (z < -9.7) {
-            animation(4);
+            animation(this, 4);
         } else if (z > 9.7) {
-            animation(5);
+            animation(this, 5);
         }
         ViewGroup vg = findViewById(R.id.ll);
         vg.invalidate();
     }
-
-    private void animation(int index) {
-        ImageView iv = (ImageView) ((RelativeLayout) findViewById(R.id.ll)).getChildAt(index);
-        iv.setBackgroundResource(R.drawable.animation);
-        ((AnimationDrawable) iv.getBackground()).start();
-    }
-
 }

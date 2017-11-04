@@ -1,7 +1,6 @@
 package com.patmyron.blackbox;
 
 import android.content.Context;
-import android.graphics.drawable.AnimationDrawable;
 import android.hardware.Sensor;
 import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
@@ -13,7 +12,8 @@ import android.view.animation.AccelerateInterpolator;
 import android.view.animation.AlphaAnimation;
 import android.view.animation.Animation;
 import android.widget.ImageView;
-import android.widget.RelativeLayout;
+
+import static com.patmyron.blackbox.MainActivity.animation;
 
 public class Puzzle4Activity extends AppCompatActivity implements SensorEventListener {
 
@@ -55,16 +55,10 @@ public class Puzzle4Activity extends AppCompatActivity implements SensorEventLis
         if (event.values[0] < 4) {
             iv.clearAnimation();
             iv.setVisibility(View.INVISIBLE);
-            animation(0);
+            animation(this, 0);
         } else {
             iv.startAnimation(mAnimation);
             iv.setVisibility(View.VISIBLE);
         }
-    }
-
-    private void animation(int index) {
-        ImageView iv = (ImageView) ((RelativeLayout) findViewById(R.id.ll)).getChildAt(index);
-        iv.setBackgroundResource(R.drawable.animation);
-        ((AnimationDrawable) iv.getBackground()).start();
     }
 }

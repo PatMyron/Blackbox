@@ -10,7 +10,8 @@ import android.os.Bundle;
 import android.provider.Settings;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.ImageView;
-import android.widget.RelativeLayout;
+
+import static com.patmyron.blackbox.MainActivity.animation;
 
 public class Puzzle5Activity extends AppCompatActivity implements SensorEventListener {
 
@@ -41,16 +42,10 @@ public class Puzzle5Activity extends AppCompatActivity implements SensorEventLis
 
     public void onSensorChanged(SensorEvent event) {
         if (Settings.Global.getInt(getContentResolver(), Settings.Global.AIRPLANE_MODE_ON, 0) == 1) {
-            animation(0);
+            animation(this, 0);
             ImageView imageView = findViewById(R.id.wifi);
             imageView.setBackgroundResource(R.drawable.animationwifi);
             ((AnimationDrawable) imageView.getBackground()).start();
         }
-    }
-
-    private void animation(int index) {
-        ImageView iv = (ImageView) ((RelativeLayout) findViewById(R.id.ll)).getChildAt(index);
-        iv.setBackgroundResource(R.drawable.animation);
-        ((AnimationDrawable) iv.getBackground()).start();
     }
 }
