@@ -8,6 +8,7 @@ import android.hardware.SensorManager;
 import android.os.Bundle;
 import android.provider.Settings;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 
@@ -19,6 +20,7 @@ import static com.patmyron.blackbox.MainActivity.getViewsByTag;
 public class Puzzle2Activity extends AppCompatActivity implements SensorEventListener {
 
     private SensorManager mSensorManager;
+    private static final double THRESHOLD = 5.0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,16 +49,12 @@ public class Puzzle2Activity extends AppCompatActivity implements SensorEventLis
         int brightness = 100;
         try {
             brightness = android.provider.Settings.System.getInt(getContentResolver(), android.provider.Settings.System.SCREEN_BRIGHTNESS);
-        } catch (Settings.SettingNotFoundException e) {
-            e.printStackTrace();
+        } catch (Settings.SettingNotFoundException ignored) {
         }
-        if (brightness < 5) {
-            animation(this, 0);
-        } else if (brightness > 250) {
-            animation(this, 1);
-        }
-        ArrayList<ImageView> rays = getViewsByTag((ViewGroup) findViewById(R.id.ll), "rays");
-        for (ImageView ray : rays) {
+        if (brightness < THRESHOLD) animation(this, 0);
+        if (brightness > (255 - THRESHOLD)) animation(this, 1);
+
+        for (ImageView ray : getViewsByTag((ViewGroup) findViewById(R.id.ll), "rays")) {
             ViewGroup.LayoutParams layoutParams = ray.getLayoutParams();
             layoutParams.height = (int) (100 * (brightness / 255.0));
             ray.setLayoutParams(layoutParams);
