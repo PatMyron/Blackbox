@@ -31,13 +31,13 @@ public class Puzzle4Activity extends AppCompatActivity implements SensorEventLis
         super.onResume();
         mSensorManager = (SensorManager) getSystemService(Context.SENSOR_SERVICE);
         mSensorManager.registerListener(this, mSensorManager.getDefaultSensor(Sensor.TYPE_PROXIMITY), SensorManager.SENSOR_DELAY_UI);
-        ImageView iv = findViewById(R.id.imageView);
+
         mAnimation = new AlphaAnimation(1, 0);
         mAnimation.setDuration(2000);
         mAnimation.setInterpolator(new AccelerateInterpolator());
         mAnimation.setRepeatCount(Animation.INFINITE);
         mAnimation.setRepeatMode(Animation.REVERSE);
-        iv.startAnimation(mAnimation);
+        findViewById(R.id.imageView).startAnimation(mAnimation);
     }
 
     @Override
