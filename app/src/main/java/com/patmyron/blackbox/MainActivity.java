@@ -78,7 +78,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public static void animation(Activity activity, int index) {
-        ImageView iv = (ImageView) ((RelativeLayout) activity.findViewById(R.id.ll)).getChildAt(index);
+        ImageView iv = (ImageView) ((ViewGroup) activity.findViewById(R.id.ll)).getChildAt(index);
         iv.setBackgroundResource(R.drawable.animation);
         ((AnimationDrawable) iv.getBackground()).start();
     }
