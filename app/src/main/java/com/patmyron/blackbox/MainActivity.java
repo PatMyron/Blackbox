@@ -36,9 +36,7 @@ public class MainActivity extends AppCompatActivity {
         DisplayMetrics displayMetrics = new DisplayMetrics();
         WindowManager windowManager = (WindowManager) context.getSystemService(Context.WINDOW_SERVICE);
         windowManager.getDefaultDisplay().getMetrics(displayMetrics);
-        int deviceHeight = displayMetrics.heightPixels;
-        int deviceWidth = displayMetrics.widthPixels;
-        return new Pair<>(deviceHeight, deviceWidth);
+        return new Pair<>(displayMetrics.heightPixels, displayMetrics.widthPixels);
     }
 
     @Override
