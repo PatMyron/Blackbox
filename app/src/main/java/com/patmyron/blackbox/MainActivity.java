@@ -27,15 +27,9 @@ public class MainActivity extends AppCompatActivity {
         final int childCount = root.getChildCount();
         for (int i = 0; i < childCount; i++) {
             final View child = root.getChildAt(i);
-            if (child instanceof ViewGroup) {
-                views.addAll(getViewsByTag((ViewGroup) child, tag));
-            }
-
-            final Object tagObj = child.getTag();
-            if (tagObj != null && tagObj.equals(tag)) {
+            if (tag.equals(child.getTag())) {
                 views.add((ImageView) child);
             }
-
         }
         return views;
     }
@@ -76,7 +70,7 @@ public class MainActivity extends AppCompatActivity {
         tags.add((String) view.getTag());
     }
 
-    public static void animation(Activity activity, int index) {
+    static void animation(Activity activity, int index) {
         ImageView iv = (ImageView) ((ViewGroup) activity.findViewById(R.id.ll)).getChildAt(index);
         iv.setBackgroundResource(R.drawable.animation);
         ((AnimationDrawable) iv.getBackground()).start();
