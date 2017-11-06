@@ -21,6 +21,7 @@ public class Puzzle8Activity extends AppCompatActivity {
 
     private BroadcastReceiver receiver;
     private final double ballSize = 100.0;
+    private static final double THRESHOLD = 5.0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -73,13 +74,9 @@ public class Puzzle8Activity extends AppCompatActivity {
                 if (rawLevel >= 0 && scale > 0) {
                     level = (rawLevel * 100) / scale;
                 }
-                if (level > 95) {
-                    animation(0);
-                } else if (level > 45 && level < 55) {
-                    animation(1);
-                } else if (level < 5) {
-                    animation(2);
-                }
+                if (level > (100 - THRESHOLD)) animation(0);
+                if (Math.abs(50 - level) < THRESHOLD) animation(1);
+                if (level < THRESHOLD) animation(2);
                 ImageView imageView = new ImageView(context);
                 ((ViewGroup) findViewById(R.id.merge)).removeAllViews();
                 int deviceHeight = getDeviceHeightAndWidth(context).first;
