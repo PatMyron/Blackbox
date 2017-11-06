@@ -19,6 +19,7 @@ import static java.lang.Math.acos;
 public class Puzzle1Activity extends AppCompatActivity implements SensorEventListener {
 
     private SensorManager mSensorManager;
+    private static final double THRESHOLD = 9.7;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -65,22 +66,13 @@ public class Puzzle1Activity extends AppCompatActivity implements SensorEventLis
             }
         }
 
-        if (x < -9.7) {
-            animation(this, 0);
-        } else if (x > 9.7) {
-            animation(this, 1);
-        }
-        if (y < -9.7) {
-            animation(this, 2);
-        } else if (y > 9.7) {
-            animation(this, 3);
-        }
-        if (z < -9.7) {
-            animation(this, 4);
-        } else if (z > 9.7) {
-            animation(this, 5);
-        }
-        ViewGroup vg = findViewById(R.id.ll);
-        vg.invalidate();
+        if (x < -THRESHOLD) animation(this, 0);
+        if (x > THRESHOLD) animation(this, 1);
+        if (y < -THRESHOLD) animation(this, 2);
+        if (y > THRESHOLD) animation(this, 3);
+        if (z < -THRESHOLD) animation(this, 4);
+        if (z > THRESHOLD) animation(this, 5);
+
+        findViewById(R.id.ll).invalidate();
     }
 }
