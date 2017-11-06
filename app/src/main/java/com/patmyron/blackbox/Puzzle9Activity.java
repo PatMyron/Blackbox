@@ -70,8 +70,8 @@ public class Puzzle9Activity extends AppCompatActivity implements SensorEventLis
             } else if (amp < 1000) {
                 animation(2);
             }
-            int deviceHeight = getDeviceHeightAndWidth(getApplicationContext()).first;
-            int deviceWidth = getDeviceHeightAndWidth(getApplicationContext()).second;
+            int deviceHeight = getDeviceHeightAndWidth(this).first;
+            int deviceWidth = getDeviceHeightAndWidth(this).second;
             ((ViewGroup) findViewById(R.id.merge)).removeAllViews();
             for (int i = 0; i < amp / 3000; i++) {
                 ImageView imageView = new ImageView(this);

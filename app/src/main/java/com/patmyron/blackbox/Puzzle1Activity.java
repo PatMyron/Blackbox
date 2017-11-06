@@ -47,8 +47,8 @@ public class Puzzle1Activity extends AppCompatActivity implements SensorEventLis
     public void onSensorChanged(SensorEvent event) {
         ImageView fluid = findViewById(R.id.fluid);
         float x = event.values[0], y = event.values[1], z = event.values[2];
-        int deviceHeight = getDeviceHeightAndWidth(getApplicationContext()).first;
-        int deviceWidth = getDeviceHeightAndWidth(getApplicationContext()).second;
+        int deviceHeight = getDeviceHeightAndWidth(this).first;
+        int deviceWidth = getDeviceHeightAndWidth(this).second;
         ViewGroup.MarginLayoutParams marginParams = (ViewGroup.MarginLayoutParams) fluid.getLayoutParams();
         marginParams.topMargin = deviceHeight / 2;
         Log.e("pm", String.valueOf(deviceHeight / 2 - (int) (z / 9.8 * deviceHeight) / 2));

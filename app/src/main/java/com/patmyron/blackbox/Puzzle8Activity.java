@@ -35,7 +35,7 @@ public class Puzzle8Activity extends AppCompatActivity {
     }
 
     private void recurse(ImageView imageView, int rowNumber, int columnNumber, int batteryLevel) {
-        int deviceWidth = getDeviceHeightAndWidth(getApplicationContext()).second;
+        int deviceWidth = getDeviceHeightAndWidth(this).second;
         if (columnNumber < (deviceWidth / ballSize) - 1) {
             ImageView imageView2 = new ImageView(this);
             imageView2.setId(View.generateViewId());
@@ -82,7 +82,7 @@ public class Puzzle8Activity extends AppCompatActivity {
                 }
                 ImageView imageView = new ImageView(context);
                 ((ViewGroup) findViewById(R.id.merge)).removeAllViews();
-                int deviceHeight = getDeviceHeightAndWidth(getApplicationContext()).first;
+                int deviceHeight = getDeviceHeightAndWidth(context).first;
                 for (int i = 0; i < ((deviceHeight / ballSize) - 1) * level / 100.0; i++) {
                     recurse(imageView, i, 0, level);
                 }
