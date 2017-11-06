@@ -46,18 +46,17 @@ public class Puzzle2Activity extends AppCompatActivity implements SensorEventLis
     }
 
     public void onSensorChanged(SensorEvent event) {
-        int brightness = 100;
         try {
-            brightness = android.provider.Settings.System.getInt(getContentResolver(), android.provider.Settings.System.SCREEN_BRIGHTNESS);
-        } catch (Settings.SettingNotFoundException ignored) {
-        }
-        if (brightness < THRESHOLD) animation(this, 0);
-        if (brightness > (255 - THRESHOLD)) animation(this, 1);
+            int brightness = android.provider.Settings.System.getInt(getContentResolver(), android.provider.Settings.System.SCREEN_BRIGHTNESS);
+            if (brightness < THRESHOLD) animation(this, 0);
+            if (brightness > (255 - THRESHOLD)) animation(this, 1);
 
-        for (ImageView ray : getViewsByTag((ViewGroup) findViewById(R.id.ll), "rays")) {
-            ViewGroup.LayoutParams layoutParams = ray.getLayoutParams();
-            layoutParams.height = (int) (100 * (brightness / 255.0));
-            ray.setLayoutParams(layoutParams);
+            for (ImageView ray : getViewsByTag((ViewGroup) findViewById(R.id.ll), "rays")) {
+                ViewGroup.LayoutParams layoutParams = ray.getLayoutParams();
+                layoutParams.height = (int) (100 * (brightness / 255.0));
+                ray.setLayoutParams(layoutParams);
+            }
+        } catch (Settings.SettingNotFoundException ignored) {
         }
     }
 }
