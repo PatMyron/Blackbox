@@ -19,6 +19,7 @@ public class Puzzle4Activity extends AppCompatActivity implements SensorEventLis
 
     private SensorManager mSensorManager;
     private Animation mAnimation;
+    private static final double THRESHOLD = 4.0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,7 +53,7 @@ public class Puzzle4Activity extends AppCompatActivity implements SensorEventLis
 
     public void onSensorChanged(SensorEvent event) {
         ImageView iv = findViewById(R.id.imageView);
-        if (event.values[0] < 4) {
+        if (event.values[0] < THRESHOLD) {
             iv.clearAnimation();
             iv.setVisibility(View.INVISIBLE);
             animation(this, 0);
