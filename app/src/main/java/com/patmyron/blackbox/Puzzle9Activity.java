@@ -28,6 +28,7 @@ public class Puzzle9Activity extends AppCompatActivity implements SensorEventLis
     private SensorManager mSensorManager;
     private SoundMeter sm;
     private final int ballSize = 300;
+    private static final double THRESHOLD = 2000;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -63,13 +64,9 @@ public class Puzzle9Activity extends AppCompatActivity implements SensorEventLis
     public void onSensorChanged(SensorEvent event) {
         if (ActivityCompat.checkSelfPermission(this, Manifest.permission.RECORD_AUDIO) == PackageManager.PERMISSION_GRANTED && sm != null) {
             double amp = sm.getAmplitude();
-            if (amp > 20000) {
-                animation(0);
-            } else if (amp < 12000 && amp > 8000) {
-                animation(1);
-            } else if (amp < 1000) {
-                animation(2);
-            }
+            if (amp > (22000 - THRESHOLD)) animation(0);
+            if (Math.abs(amp - 10000) < THRESHOLD) animation(1);
+            if (amp < THRESHOLD) animation(2);
             int deviceHeight = getDeviceHeightAndWidth(this).first;
             int deviceWidth = getDeviceHeightAndWidth(this).second;
             ((ViewGroup) findViewById(R.id.merge)).removeAllViews();
