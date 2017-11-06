@@ -20,7 +20,7 @@ import static com.patmyron.blackbox.MainActivity.getViewsByTag;
 public class Puzzle2Activity extends AppCompatActivity implements SensorEventListener {
 
     private SensorManager mSensorManager;
-    private static final double THRESHOLD = 5.0;
+    private static final double THRESHOLD = 10.1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
