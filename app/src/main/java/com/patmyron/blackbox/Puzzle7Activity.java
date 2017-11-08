@@ -36,7 +36,7 @@ public class Puzzle7Activity extends AppCompatActivity {
         ((ViewGroup) findViewById(R.id.ll)).addView(imageView);
 
         ShapeDrawable arcShape2 = new ShapeDrawable(new ArcShape(start - 90, 30));
-        arcShape2.getPaint().setColor(getResources().getColor(R.color.puzzle7));
+        arcShape2.getPaint().setColor(getResources().getColor(R.color.puzzle7translucent));
         arcShape2.setIntrinsicHeight((int) (RADIUS * PERCENTAGE));
         arcShape2.setIntrinsicWidth((int) (RADIUS * PERCENTAGE));
         ImageView imageView2 = new ImageView(this);
