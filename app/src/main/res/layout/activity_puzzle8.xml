@@ -33,7 +33,8 @@
                 android:layout_width="75dp"
                 android:layout_height="75dp"
                 android:layout_gravity="center"
-                android:background="@drawable/blink00" />
+                android:background="@drawable/blink00"
+                android:backgroundTint="@color/puzzle8" />
         </LinearLayout>
 
         <LinearLayout
@@ -47,7 +48,8 @@
                 android:layout_width="75dp"
                 android:layout_height="75dp"
                 android:layout_gravity="center"
-                android:background="@drawable/blink00" />
+                android:background="@drawable/blink00"
+                android:backgroundTint="@color/puzzle8" />
         </LinearLayout>
 
         <LinearLayout
@@ -61,7 +63,8 @@
                 android:layout_width="75dp"
                 android:layout_height="75dp"
                 android:layout_gravity="center"
-                android:background="@drawable/blink00" />
+                android:background="@drawable/blink00"
+                android:backgroundTint="@color/puzzle8" />
         </LinearLayout>
     </LinearLayout>
 </RelativeLayout>

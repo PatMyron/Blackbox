@@ -19,9 +19,9 @@ import static com.patmyron.blackbox.MainActivity.getDeviceHeightAndWidth;
 
 public class Puzzle8Activity extends AppCompatActivity {
 
-    private BroadcastReceiver receiver;
-    private final double ballSize = 100.0;
     private static final double THRESHOLD = 5.0;
+    private final double ballSize = 100.0;
+    private BroadcastReceiver receiver;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,7 +41,7 @@ public class Puzzle8Activity extends AppCompatActivity {
             ImageView imageView2 = new ImageView(this);
             imageView2.setId(View.generateViewId());
             imageView2.setImageResource(R.drawable.circle);
-            int color = (batteryLevel > 25) ? R.color.puzzle8 : R.color.puzzle8b;
+            int color = (batteryLevel > 25) ? R.color.puzzle8translucent : R.color.puzzle8b;
             imageView2.setColorFilter(ContextCompat.getColor(this, color));
             RelativeLayout.LayoutParams params2 = new RelativeLayout.LayoutParams((int) ballSize, (int) ballSize);
             params2.addRule(RelativeLayout.ALIGN_PARENT_BOTTOM);
