@@ -8,19 +8,16 @@ import android.hardware.SensorManager;
 import android.os.Bundle;
 import android.provider.Settings;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.ViewGroup;
 import android.widget.ImageView;
-
-import java.util.ArrayList;
 
 import static com.patmyron.blackbox.MainActivity.animation;
 import static com.patmyron.blackbox.MainActivity.getViewsByTag;
 
 public class Puzzle2Activity extends AppCompatActivity implements SensorEventListener {
 
-    private SensorManager mSensorManager;
     private static final double THRESHOLD = 10.1;
+    private SensorManager mSensorManager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

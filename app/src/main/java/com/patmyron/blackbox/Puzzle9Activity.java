@@ -25,10 +25,10 @@ import static com.patmyron.blackbox.MainActivity.getDeviceHeightAndWidth;
 
 public class Puzzle9Activity extends AppCompatActivity implements SensorEventListener {
 
+    private static final double THRESHOLD = 2000;
+    private final int ballSize = 300;
     private SensorManager mSensorManager;
     private SoundMeter sm;
-    private final int ballSize = 300;
-    private static final double THRESHOLD = 2000;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

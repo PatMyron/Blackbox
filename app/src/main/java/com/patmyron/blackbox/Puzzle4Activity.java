@@ -17,9 +17,9 @@ import static com.patmyron.blackbox.MainActivity.animation;
 
 public class Puzzle4Activity extends AppCompatActivity implements SensorEventListener {
 
+    private static final double THRESHOLD = 4.0;
     private SensorManager mSensorManager;
     private Animation mAnimation;
-    private static final double THRESHOLD = 4.0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

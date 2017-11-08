@@ -39,6 +39,12 @@ public class MainActivity extends AppCompatActivity {
         return new Pair<>(displayMetrics.heightPixels, displayMetrics.widthPixels);
     }
 
+    static void animation(Activity activity, int index) {
+        ImageView iv = (ImageView) ((ViewGroup) activity.findViewById(R.id.ll)).getChildAt(index);
+        iv.setBackgroundResource(R.drawable.animation);
+        ((AnimationDrawable) iv.getBackground()).start();
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -52,11 +58,5 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent();
         intent.setClassName(this, this.getPackageName() + view.getTag());
         this.startActivity(intent);
-    }
-
-    static void animation(Activity activity, int index) {
-        ImageView iv = (ImageView) ((ViewGroup) activity.findViewById(R.id.ll)).getChildAt(index);
-        iv.setBackgroundResource(R.drawable.animation);
-        ((AnimationDrawable) iv.getBackground()).start();
     }
 }

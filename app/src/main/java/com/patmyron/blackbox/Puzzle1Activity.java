@@ -18,8 +18,8 @@ import static java.lang.Math.acos;
 
 public class Puzzle1Activity extends AppCompatActivity implements SensorEventListener {
 
-    private SensorManager mSensorManager;
     private static final double THRESHOLD = 9.7;
+    private SensorManager mSensorManager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
