@@ -7,6 +7,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 
+import java.util.Date;
+
 import static com.patmyron.blackbox.MainActivity.getDeviceHeightAndWidth;
 
 public class Puzzle7Activity extends AppCompatActivity {
@@ -19,13 +21,11 @@ public class Puzzle7Activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_puzzle7);
 
-        for (int i = 0; i < 12; i++) {
-            arc(i * 30);
-        }
+        arc(new Date().getHours() * 30);
     }
 
     private void arc(int start) {
-        ShapeDrawable arcShape = new ShapeDrawable(new ArcShape(start, 30));
+        ShapeDrawable arcShape = new ShapeDrawable(new ArcShape(start - 90, 30));
         arcShape.getPaint().setColor(getResources().getColor(R.color.bg));
         arcShape.setIntrinsicHeight(RADIUS);
         arcShape.setIntrinsicWidth(RADIUS);
@@ -35,7 +35,7 @@ public class Puzzle7Activity extends AppCompatActivity {
         imageView.setImageDrawable(arcShape);
         ((ViewGroup) findViewById(R.id.ll)).addView(imageView);
 
-        ShapeDrawable arcShape2 = new ShapeDrawable(new ArcShape(start, 30));
+        ShapeDrawable arcShape2 = new ShapeDrawable(new ArcShape(start - 90, 30));
         arcShape2.getPaint().setColor(getResources().getColor(R.color.puzzle7));
         arcShape2.setIntrinsicHeight((int) (RADIUS * PERCENTAGE));
         arcShape2.setIntrinsicWidth((int) (RADIUS * PERCENTAGE));
