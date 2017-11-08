@@ -44,5 +44,7 @@ public class Puzzle7Activity extends AppCompatActivity {
         imageView2.setY((float) (getDeviceHeightAndWidth(this).first / 2.0 - RADIUS * PERCENTAGE / 2.0 - 75 / 2.0));
         imageView2.setImageDrawable(arcShape2);
         ((ViewGroup) findViewById(R.id.ll)).addView(imageView2);
+
+        findViewById(R.id.imageView1).bringToFront();
     }
 }
