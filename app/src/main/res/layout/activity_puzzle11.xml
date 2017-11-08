@@ -10,6 +10,13 @@
     tools:context="com.patmyron.blackbox.Puzzle11Activity">
 
     <ImageView
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_centerInParent="true"
+        android:background="@drawable/circle"
+        android:backgroundTint="@color/puzzle11b" />
+
+    <ImageView
         android:id="@+id/imageView1"
         android:layout_width="75dp"
         android:layout_height="75dp"
