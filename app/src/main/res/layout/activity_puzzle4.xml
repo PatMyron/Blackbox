@@ -15,7 +15,8 @@
         android:layout_height="75dp"
         android:layout_centerInParent="true"
         android:layout_gravity="center"
-        android:background="@drawable/blink00" />
+        android:background="@drawable/blink00"
+        android:backgroundTint="@color/puzzle4" />
 
     <ImageView
         android:id="@+id/imageView"

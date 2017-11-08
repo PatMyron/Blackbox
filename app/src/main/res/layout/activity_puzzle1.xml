@@ -22,7 +22,8 @@
             android:layout_alignParentEnd="true"
             android:layout_alignTop="@+id/imageView2"
             android:layout_gravity="center"
-            android:background="@drawable/blink00" />
+            android:background="@drawable/blink00"
+            android:backgroundTint="@color/puzzle1" />
 
         <ImageView
             android:id="@+id/imageView2"
@@ -31,7 +32,8 @@
             android:layout_alignParentStart="true"
             android:layout_centerVertical="true"
             android:layout_gravity="center"
-            android:background="@drawable/blink00" />
+            android:background="@drawable/blink00"
+            android:backgroundTint="@color/puzzle1" />
 
         <ImageView
             android:id="@+id/imageView3"
@@ -42,6 +44,7 @@
             android:layout_gravity="center"
             android:adjustViewBounds="false"
             android:background="@drawable/blink00"
+            android:backgroundTint="@color/puzzle1"
             android:cropToPadding="false" />
 
         <ImageView
@@ -51,7 +54,8 @@
             android:layout_alignParentBottom="true"
             android:layout_alignStart="@+id/imageView3"
             android:layout_gravity="center"
-            android:background="@drawable/blink00" />
+            android:background="@drawable/blink00"
+            android:backgroundTint="@color/puzzle1" />
 
         <ImageView
             android:id="@+id/imageView5"
@@ -60,7 +64,8 @@
             android:layout_above="@+id/imageView2"
             android:layout_alignStart="@+id/imageView4"
             android:layout_gravity="center"
-            android:background="@drawable/blink00" />
+            android:background="@drawable/blink00"
+            android:backgroundTint="@color/puzzle1" />
 
         <ImageView
             android:id="@+id/imageView6"
@@ -69,7 +74,8 @@
             android:layout_alignStart="@+id/imageView4"
             android:layout_below="@+id/imageView2"
             android:layout_gravity="center"
-            android:background="@drawable/blink00" />
+            android:background="@drawable/blink00"
+            android:backgroundTint="@color/puzzle1" />
 
     </RelativeLayout>
 
