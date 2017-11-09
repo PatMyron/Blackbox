@@ -18,6 +18,7 @@ public class Puzzle11Activity extends AppCompatActivity {
         MoonIllumination moonIllumination = MoonIllumination.compute()
                 .now()
                 .execute();
+        // positive phase is waning
         if (moonIllumination.getFraction() < THRESHOLD) animation(this, 1);
         if (moonIllumination.getFraction() > (1 - THRESHOLD)) animation(this, 2);
     }
