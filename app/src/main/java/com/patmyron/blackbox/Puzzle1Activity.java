@@ -7,7 +7,6 @@ import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 
@@ -51,7 +50,6 @@ public class Puzzle1Activity extends AppCompatActivity implements SensorEventLis
         int deviceWidth = getDeviceHeightAndWidth(this).second;
         ViewGroup.MarginLayoutParams marginParams = (ViewGroup.MarginLayoutParams) fluid.getLayoutParams();
         marginParams.topMargin = deviceHeight / 2;
-        Log.e("pm", String.valueOf(deviceHeight / 2 - (int) (z / 9.8 * deviceHeight) / 2));
         fluid.setPivotX(deviceWidth / 2 + 5000);
         fluid.setPivotY(0);
         fluid.setRotation((float) Math.toDegrees(acos(y / 9.8)));
