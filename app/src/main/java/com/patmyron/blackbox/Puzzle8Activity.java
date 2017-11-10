@@ -85,8 +85,8 @@ public class Puzzle8Activity extends AppCompatActivity {
                 }
             }
         };
-        IntentFilter batteryLevelFilter = new IntentFilter(Intent.ACTION_BATTERY_CHANGED);
-        registerReceiver(receiver, batteryLevelFilter);
+        IntentFilter filter = new IntentFilter(Intent.ACTION_BATTERY_CHANGED);
+        registerReceiver(receiver, filter);
     }
 
     private void animation(int index) {
