@@ -1,5 +1,6 @@
 package com.patmyron.blackbox;
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MotionEvent;
@@ -28,12 +29,25 @@ public class Puzzle29Activity extends AppCompatActivity {
                 timer.schedule(new TimerTask() {
                     @Override
                     public void run() {
-                        anim(0);
+                        anim(1);
                     }
                 }, THRESHOLD);
+                final int reps = 50;
+                for (int i = 0; i < reps; i++) {
+                    final String r = String.format("%02x", Integer.parseInt("94", 16) * i / reps);
+                    final String g = String.format("%02x", Integer.parseInt("46", 16) * i / reps);
+                    final String b = String.format("%02x", Integer.parseInt("7C", 16) * i / reps);
+                    timer.schedule(new TimerTask() {
+                        @Override
+                        public void run() {
+                            findViewById(R.id.bg).setBackgroundColor(Color.parseColor("#99" + r + g + b));
+                        }
+                    }, i * THRESHOLD / reps);
+                }
                 break;
             }
             case MotionEvent.ACTION_UP: {
+                findViewById(R.id.bg).setBackgroundColor(getResources().getColor(R.color.bg));
                 timer.cancel();
                 break;
             }
