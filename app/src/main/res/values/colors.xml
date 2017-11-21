@@ -23,7 +23,14 @@
     <color name="puzzle10">#6937FB</color>
     <color name="puzzle11">#BD5682</color>
     <color name="puzzle11b">#FCD683</color>
-    <color name="puzzle17">#6578F8</color>
+    <color name="puzzle12">#FF4450</color>
+    <color name="puzzle13">#F7496E</color>
+    <color name="puzzle14">#087DFE</color>
+    <color name="puzzle15">#F80FC3</color>
+    <color name="puzzle16">#FF9607</color>
+    <color name="puzzle17">#5477F7</color>
+    <color name="puzzle18">#BDE988</color>
+    <color name="puzzle19">#85BCE5</color>
     <color name="puzzle20">#A12852</color>
     <color name="puzzle29">#94467C</color>
 </resources>
