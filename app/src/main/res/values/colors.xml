@@ -52,5 +52,8 @@
     <color name="puzzle38">#FF8A33</color>
     <color name="puzzle39">#E40A47</color>
     <color name="puzzle40">#19A7F3</color>
+    <!-- extra puzzles -->
     <color name="puzzle41">#00E6C2</color>
+    <color name="puzzle42">#294ABE</color>
+    <color name="puzzle43">#F14D94</color>
 </resources>
