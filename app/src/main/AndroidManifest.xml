@@ -34,6 +34,7 @@
         <activity android:name=".Puzzle17Activity" />
         <activity android:name=".Puzzle20Activity" />
         <activity android:name=".Puzzle29Activity" />
+        <activity android:name=".HintActivity" />
     </application>
 
 </manifest>
