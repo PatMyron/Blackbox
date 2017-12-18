@@ -56,7 +56,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void puzzleLaunch(View view) {
         Intent intent = new Intent();
-        intent.setClassName(this, this.getPackageName() + view.getTag());
-        this.startActivity(intent);
+        intent.setClassName(this, getPackageName() + view.getTag());
+        startActivity(intent);
     }
 }
