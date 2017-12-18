@@ -16,6 +16,7 @@
         tools:context="com.patmyron.blackbox.Puzzle1Activity">
 
         <ImageView
+            android:onClick="hint"
             android:id="@+id/imageView1"
             android:layout_width="75dp"
             android:layout_height="75dp"

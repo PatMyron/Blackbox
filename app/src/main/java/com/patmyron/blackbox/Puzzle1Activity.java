@@ -1,19 +1,20 @@
 package com.patmyron.blackbox;
 
 import android.content.Context;
+import android.content.Intent;
 import android.hardware.Sensor;
 import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 
 import static com.patmyron.blackbox.MainActivity.animation;
 import static com.patmyron.blackbox.MainActivity.getDeviceHeightAndWidth;
 import static java.lang.Math.acos;
-
 
 public class Puzzle1Activity extends AppCompatActivity implements SensorEventListener {
 
@@ -72,5 +73,9 @@ public class Puzzle1Activity extends AppCompatActivity implements SensorEventLis
         if (z > THRESHOLD) animation(this, 5);
 
         findViewById(R.id.ll).invalidate();
+    }
+
+    public void hint(View view) {
+        startActivity(new Intent(this, HintActivity.class));
     }
 }
