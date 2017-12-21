@@ -15,9 +15,7 @@
         android:background="@color/puzzle7translucent" />
 
     <ImageView
-        android:id="@+id/imageView1"
-        style="@style/boxInChallenge"
-        android:layout_centerInParent="true"
+        style="@style/centerBoxInChallenge"
         android:backgroundTint="@color/puzzle7" />
 
 </RelativeLayout>

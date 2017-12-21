@@ -30,4 +30,9 @@
         <item name="android:background">@drawable/blink00</item>
         <item name="android:onClick">hint</item>
     </style>
+
+    <style name="centerBoxInChallenge" parent="boxInChallenge">
+        <item type="id" name="imageView1" />
+        <item name="android:layout_centerInParent">true</item>
+    </style>
 </resources>
