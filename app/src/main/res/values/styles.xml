@@ -14,4 +14,11 @@
         <item name="android:scaleType">fitXY</item>
         <item name="srcCompat">@drawable/dot</item>
     </style>
+
+    <style name="sunRay">
+        <item name="android:layout_width">9dp</item>
+        <item name="android:layout_height">40dp</item>
+        <item name="android:background">@color/puzzle2</item>
+        <item name="android:tag">rays</item>
+    </style>
 </resources>
