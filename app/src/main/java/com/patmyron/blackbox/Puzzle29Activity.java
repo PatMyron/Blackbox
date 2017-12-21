@@ -56,7 +56,7 @@ public class Puzzle29Activity extends AppCompatActivity {
         return true;
     }
 
-    void anim(int index) {
+    private void anim(int index) {
         animation(this, index);
     }
 }
