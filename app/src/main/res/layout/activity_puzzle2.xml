@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/ll"
     android:layout_width="match_parent"
@@ -25,7 +26,7 @@
         android:layout_width="75dp"
         android:layout_height="75dp"
         android:layout_alignParentEnd="true"
-        android:layout_alignTop="@+id/imageView1"
+        android:layout_centerVertical="true"
         android:layout_gravity="center"
         android:layout_marginEnd="60dp"
         android:background="@drawable/blink00"
@@ -37,7 +38,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="100dp"
         android:scaleType="fitXY"
-        android:src="@drawable/sunny"
+        app:srcCompat="@drawable/sunny"
         android:tint="@color/puzzle2" />
 
     <ImageView
