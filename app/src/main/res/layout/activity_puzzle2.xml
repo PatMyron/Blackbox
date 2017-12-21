@@ -52,9 +52,7 @@
         style="@style/sunRay"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="115dp"
-        android:rotation="180"
-        android:transformPivotX="4.5dp"
-        android:transformPivotY="0dp" />
+        android:rotation="180" />
 
     <ImageView
         style="@style/sunRay"
@@ -66,18 +64,14 @@
         android:layout_marginRight="29dp"
         android:layout_marginTop="148dp"
         android:layout_toLeftOf="@id/anchor"
-        android:rotation="90"
-        android:transformPivotX="4.5dp"
-        android:transformPivotY="0dp" />
+        android:rotation="90" />
 
     <ImageView
         style="@style/sunRay"
         android:layout_marginLeft="29dp"
         android:layout_marginTop="148dp"
         android:layout_toRightOf="@id/anchor"
-        android:rotation="270"
-        android:transformPivotX="4.5dp"
-        android:transformPivotY="0dp" />
+        android:rotation="270" />
 
     <ImageView
         style="@style/sunRay"
@@ -85,9 +79,7 @@
         android:layout_marginRight="20dp"
         android:layout_marginTop="25dp"
         android:layout_toLeftOf="@id/anchor"
-        android:rotation="45"
-        android:transformPivotX="4.5dp"
-        android:transformPivotY="0dp" />
+        android:rotation="45" />
 
     <ImageView
         style="@style/sunRay"
@@ -95,9 +87,7 @@
         android:layout_marginRight="20dp"
         android:layout_marginTop="-25dp"
         android:layout_toLeftOf="@id/anchor"
-        android:rotation="135"
-        android:transformPivotX="4.5dp"
-        android:transformPivotY="0dp" />
+        android:rotation="135" />
 
     <ImageView
         style="@style/sunRay"
@@ -105,9 +95,7 @@
         android:layout_marginLeft="20dp"
         android:layout_marginTop="-25dp"
         android:layout_toRightOf="@id/anchor"
-        android:rotation="225"
-        android:transformPivotX="4.5dp"
-        android:transformPivotY="0dp" />
+        android:rotation="225" />
 
     <ImageView
         style="@style/sunRay"
@@ -115,7 +103,5 @@
         android:layout_marginLeft="20dp"
         android:layout_marginTop="25dp"
         android:layout_toRightOf="@id/anchor"
-        android:rotation="315"
-        android:transformPivotX="4.5dp"
-        android:transformPivotY="0dp" />
+        android:rotation="315" />
 </RelativeLayout>
