@@ -34,9 +34,7 @@
             style="@style/boxInChallenge"
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
-            android:adjustViewBounds="false"
-            android:backgroundTint="@color/puzzle1"
-            android:cropToPadding="false" />
+            android:backgroundTint="@color/puzzle1" />
 
         <ImageView
             android:id="@+id/imageView4"
