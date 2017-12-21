@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <com.jrummyapps.android.widget.TwoDScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -52,7 +53,7 @@
             android:background="#00000000"
             android:onClick="puzzleLaunch"
             android:scaleType="fitXY"
-            android:src="@drawable/dot"
+            app:srcCompat="@drawable/dot"
             android:tag=".Puzzle9Activity"
             android:tint="@color/puzzle9" />
 
@@ -67,7 +68,7 @@
             android:background="#00000000"
             android:onClick="puzzleLaunch"
             android:scaleType="fitXY"
-            android:src="@drawable/dot"
+            app:srcCompat="@drawable/dot"
             android:tag=".Puzzle11Activity"
             android:tint="@color/puzzle11" />
 
@@ -77,7 +78,7 @@
             android:background="#00000000"
             android:onClick="puzzleLaunch"
             android:scaleType="fitXY"
-            android:src="@drawable/dot"
+            app:srcCompat="@drawable/dot"
             android:tag=".Puzzle11Activity"
             android:tint="@color/puzzle11" />
 
@@ -87,7 +88,7 @@
             android:background="#00000000"
             android:onClick="puzzleLaunch"
             android:scaleType="fitXY"
-            android:src="@drawable/dot"
+            app:srcCompat="@drawable/dot"
             android:tag=".Puzzle10Activity"
             android:tint="@color/puzzle10" />
 
@@ -102,7 +103,7 @@
             android:background="#00000000"
             android:onClick="puzzleLaunch"
             android:scaleType="fitXY"
-            android:src="@drawable/dot"
+            app:srcCompat="@drawable/dot"
             android:tag=".Puzzle9Activity"
             android:tint="@color/puzzle9" />
 
@@ -112,7 +113,7 @@
             android:background="#00000000"
             android:onClick="puzzleLaunch"
             android:scaleType="fitXY"
-            android:src="@drawable/dot"
+            app:srcCompat="@drawable/dot"
             android:tag=".Puzzle1Activity"
             android:tint="@color/puzzle1" />
 
@@ -122,7 +123,7 @@
             android:background="#00000000"
             android:onClick="puzzleLaunch"
             android:scaleType="fitXY"
-            android:src="@drawable/dot"
+            app:srcCompat="@drawable/dot"
             android:tag=".Puzzle1Activity"
             android:tint="@color/puzzle1" />
 
@@ -132,7 +133,7 @@
             android:background="#00000000"
             android:onClick="puzzleLaunch"
             android:scaleType="fitXY"
-            android:src="@drawable/dot"
+            app:srcCompat="@drawable/dot"
             android:tag=".Puzzle7Activity"
             android:tint="@color/puzzle7" />
 
@@ -142,7 +143,7 @@
             android:background="#00000000"
             android:onClick="puzzleLaunch"
             android:scaleType="fitXY"
-            android:src="@drawable/dot"
+            app:srcCompat="@drawable/dot"
             android:tag=".Puzzle8Activity"
             android:tint="@color/puzzle8" />
 
@@ -152,7 +153,7 @@
             android:background="#00000000"
             android:onClick="puzzleLaunch"
             android:scaleType="fitXY"
-            android:src="@drawable/dot"
+            app:srcCompat="@drawable/dot"
             android:tag=".Puzzle29Activity"
             android:tint="@color/puzzle29" />
 
@@ -162,7 +163,7 @@
             android:background="#00000000"
             android:onClick="puzzleLaunch"
             android:scaleType="fitXY"
-            android:src="@drawable/dot"
+            app:srcCompat="@drawable/dot"
             android:tag=".Puzzle9Activity"
             android:tint="@color/puzzle9" />
 
@@ -172,7 +173,7 @@
             android:background="#00000000"
             android:onClick="puzzleLaunch"
             android:scaleType="fitXY"
-            android:src="@drawable/dot"
+            app:srcCompat="@drawable/dot"
             android:tag=".Puzzle1Activity"
             android:tint="@color/puzzle1" />
 
@@ -182,7 +183,7 @@
             android:background="#00000000"
             android:onClick="puzzleLaunch"
             android:scaleType="fitXY"
-            android:src="@drawable/dot"
+            app:srcCompat="@drawable/dot"
             android:tag=".Puzzle1Activity"
             android:tint="@color/puzzle1" />
 
@@ -192,7 +193,7 @@
             android:background="#00000000"
             android:onClick="puzzleLaunch"
             android:scaleType="fitXY"
-            android:src="@drawable/dot"
+            app:srcCompat="@drawable/dot"
             android:tag=".Puzzle7Activity"
             android:tint="@color/puzzle7" />
 
@@ -202,7 +203,7 @@
             android:background="#00000000"
             android:onClick="puzzleLaunch"
             android:scaleType="fitXY"
-            android:src="@drawable/dot"
+            app:srcCompat="@drawable/dot"
             android:tag=".Puzzle8Activity"
             android:tint="@color/puzzle8" />
 
@@ -212,7 +213,7 @@
             android:background="#00000000"
             android:onClick="puzzleLaunch"
             android:scaleType="fitXY"
-            android:src="@drawable/dot"
+            app:srcCompat="@drawable/dot"
             android:tag=".Puzzle5Activity"
             android:tint="@color/puzzle5" />
 
@@ -222,7 +223,7 @@
             android:background="#00000000"
             android:onClick="puzzleLaunch"
             android:scaleType="fitXY"
-            android:src="@drawable/dot"
+            app:srcCompat="@drawable/dot"
             android:tag=".Puzzle6Activity"
             android:tint="@color/puzzle6" />
 
@@ -232,7 +233,7 @@
             android:background="#00000000"
             android:onClick="puzzleLaunch"
             android:scaleType="fitXY"
-            android:src="@drawable/dot"
+            app:srcCompat="@drawable/dot"
             android:tag=".Puzzle1Activity"
             android:tint="@color/puzzle1" />
 
@@ -242,7 +243,7 @@
             android:background="#00000000"
             android:onClick="puzzleLaunch"
             android:scaleType="fitXY"
-            android:src="@drawable/dot"
+            app:srcCompat="@drawable/dot"
             android:tag=".Puzzle1Activity"
             android:tint="@color/puzzle1" />
 
@@ -252,7 +253,7 @@
             android:background="#00000000"
             android:onClick="puzzleLaunch"
             android:scaleType="fitXY"
-            android:src="@drawable/dot"
+            app:srcCompat="@drawable/dot"
             android:tag=".Puzzle20Activity"
             android:tint="@color/puzzle20" />
 
@@ -262,7 +263,7 @@
             android:background="#00000000"
             android:onClick="puzzleLaunch"
             android:scaleType="fitXY"
-            android:src="@drawable/dot"
+            app:srcCompat="@drawable/dot"
             android:tag=".Puzzle8Activity"
             android:tint="@color/puzzle8" />
 
@@ -272,7 +273,7 @@
             android:background="#00000000"
             android:onClick="puzzleLaunch"
             android:scaleType="fitXY"
-            android:src="@drawable/dot"
+            app:srcCompat="@drawable/dot"
             android:tag=".Puzzle4Activity"
             android:tint="@color/puzzle4" />
 
@@ -282,7 +283,7 @@
             android:background="#00000000"
             android:onClick="puzzleLaunch"
             android:scaleType="fitXY"
-            android:src="@drawable/dot"
+            app:srcCompat="@drawable/dot"
             android:tag=".Puzzle2Activity"
             android:tint="@color/puzzle2" />
 
@@ -292,7 +293,7 @@
             android:background="#00000000"
             android:onClick="puzzleLaunch"
             android:scaleType="fitXY"
-            android:src="@drawable/dot"
+            app:srcCompat="@drawable/dot"
             android:tag=".Puzzle2Activity"
             android:tint="@color/puzzle2" />
 
@@ -302,7 +303,7 @@
             android:background="#00000000"
             android:onClick="puzzleLaunch"
             android:scaleType="fitXY"
-            android:src="@drawable/dot"
+            app:srcCompat="@drawable/dot"
             android:tag=".Puzzle3Activity"
             android:tint="@color/puzzle3" />
 
@@ -312,7 +313,7 @@
             android:background="#00000000"
             android:onClick="puzzleLaunch"
             android:scaleType="fitXY"
-            android:src="@drawable/dot"
+            app:srcCompat="@drawable/dot"
             android:tag=".Puzzle3Activity"
             android:tint="@color/puzzle3" />
 
@@ -337,7 +338,7 @@
             android:background="#00000000"
             android:onClick="puzzleLaunch"
             android:scaleType="fitXY"
-            android:src="@drawable/dot"
+            app:srcCompat="@drawable/dot"
             android:tag=".Puzzle17Activity"
             android:tint="@color/puzzle17" />
 
@@ -347,7 +348,7 @@
             android:background="#00000000"
             android:onClick="puzzleLaunch"
             android:scaleType="fitXY"
-            android:src="@drawable/dot"
+            app:srcCompat="@drawable/dot"
             android:tag=".Puzzle3Activity"
             android:tint="@color/puzzle3" />
 
@@ -357,7 +358,7 @@
             android:background="#00000000"
             android:onClick="puzzleLaunch"
             android:scaleType="fitXY"
-            android:src="@drawable/dot"
+            app:srcCompat="@drawable/dot"
             android:tag=".Puzzle3Activity"
             android:tint="@color/puzzle3" />
 
