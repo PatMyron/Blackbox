@@ -26,10 +26,8 @@
 
             <ImageView
                 android:id="@+id/imageView1"
-                android:layout_width="75dp"
-                android:layout_height="75dp"
+                style="@style/boxInChallenge"
                 android:layout_gravity="center"
-                android:background="@drawable/blink00"
                 android:backgroundTint="@color/puzzle9" />
         </LinearLayout>
 
@@ -41,10 +39,8 @@
 
             <ImageView
                 android:id="@+id/imageView2"
-                android:layout_width="75dp"
-                android:layout_height="75dp"
+                style="@style/boxInChallenge"
                 android:layout_gravity="center"
-                android:background="@drawable/blink00"
                 android:backgroundTint="@color/puzzle9" />
         </LinearLayout>
 
@@ -56,10 +52,8 @@
 
             <ImageView
                 android:id="@+id/imageView3"
-                android:layout_width="75dp"
-                android:layout_height="75dp"
+                style="@style/boxInChallenge"
                 android:layout_gravity="center"
-                android:background="@drawable/blink00"
                 android:backgroundTint="@color/puzzle9" />
         </LinearLayout>
     </LinearLayout>

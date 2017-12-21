@@ -11,10 +11,8 @@
 
     <ImageView
         android:id="@+id/imageView1"
-        android:layout_width="75dp"
-        android:layout_height="75dp"
+        style="@style/boxInChallenge"
         android:layout_centerHorizontal="true"
-        android:background="@drawable/blink00"
         android:backgroundTint="@color/puzzle20" />
 
 </RelativeLayout>
