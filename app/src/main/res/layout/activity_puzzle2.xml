@@ -38,8 +38,8 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="100dp"
         android:scaleType="fitXY"
-        app:srcCompat="@drawable/sunny"
-        android:tint="@color/puzzle2" />
+        android:tint="@color/puzzle2"
+        app:srcCompat="@drawable/sunny" />
 
     <ImageView
         android:id="@+id/anchor"

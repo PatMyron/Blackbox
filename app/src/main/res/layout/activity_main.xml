@@ -14,27 +14,10 @@
 
         <ImageView />
 
-        <ImageView />
-
-        <ImageView />
-
-        <ImageView />
-
-        <ImageView />
-
-        <ImageView />
-
-        <ImageView />
-
         <ImageButton
-            android:layout_width="75dp"
-            android:layout_height="75dp"
-            android:background="#00000000"
-            android:onClick="puzzleLaunch"
-            android:scaleType="fitXY"
+            style="@style/mainScreenPuzzle"
             android:tag=".Puzzle9Activity"
-            android:tint="@color/puzzle9"
-            app:srcCompat="@drawable/dot" />
+            android:tint="@color/puzzle9" />
 
         <ImageView />
 

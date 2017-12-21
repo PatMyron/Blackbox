@@ -25,8 +25,8 @@
         android:layout_alignParentEnd="true"
         android:layout_alignParentTop="true"
         android:rotation="45"
-        app:srcCompat="@drawable/corner"
-        android:tint="@color/puzzle6translucent" />
+        android:tint="@color/puzzle6translucent"
+        app:srcCompat="@drawable/corner" />
 
     <ImageView
         android:layout_width="50dp"
@@ -34,8 +34,8 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:rotation="-45"
-        app:srcCompat="@drawable/corner"
-        android:tint="@color/puzzle6translucent" />
+        android:tint="@color/puzzle6translucent"
+        app:srcCompat="@drawable/corner" />
 
     <ImageView
         android:layout_width="50dp"
@@ -43,8 +43,8 @@
         android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
         android:rotation="-225"
-        app:srcCompat="@drawable/corner"
-        android:tint="@color/puzzle6translucent" />
+        android:tint="@color/puzzle6translucent"
+        app:srcCompat="@drawable/corner" />
 
     <ImageView
         android:layout_width="50dp"
@@ -52,6 +52,6 @@
         android:layout_alignParentBottom="true"
         android:layout_alignParentStart="true"
         android:rotation="225"
-        app:srcCompat="@drawable/corner"
-        android:tint="@color/puzzle6translucent" />
+        android:tint="@color/puzzle6translucent"
+        app:srcCompat="@drawable/corner" />
 </RelativeLayout>
