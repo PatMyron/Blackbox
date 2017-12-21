@@ -167,7 +167,5 @@
             style="@style/mainScreenPuzzle"
             android:tag=".Puzzle3Activity"
             android:tint="@color/puzzle3" />
-
-        <ImageView />
     </GridLayout>
 </com.jrummyapps.android.widget.TwoDScrollView>
