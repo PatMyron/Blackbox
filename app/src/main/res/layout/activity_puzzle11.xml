@@ -17,7 +17,6 @@
         android:backgroundTint="@color/puzzle11b" />
 
     <ImageView
-        android:id="@+id/imageView1"
         style="@style/boxInChallenge"
         android:layout_alignParentStart="true"
         android:layout_centerVertical="true"
@@ -25,7 +24,6 @@
         android:backgroundTint="@color/puzzle11" />
 
     <ImageView
-        android:id="@+id/imageView2"
         style="@style/boxInChallenge"
         android:layout_alignParentEnd="true"
         android:layout_centerVertical="true"

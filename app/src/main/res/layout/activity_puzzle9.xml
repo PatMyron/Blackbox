@@ -25,7 +25,6 @@
             android:gravity="center">
 
             <ImageView
-                android:id="@+id/imageView1"
                 style="@style/boxInChallenge"
                 android:backgroundTint="@color/puzzle9" />
         </LinearLayout>
@@ -37,7 +36,6 @@
             android:gravity="center">
 
             <ImageView
-                android:id="@+id/imageView2"
                 style="@style/boxInChallenge"
                 android:backgroundTint="@color/puzzle9" />
         </LinearLayout>
@@ -49,7 +47,6 @@
             android:gravity="center">
 
             <ImageView
-                android:id="@+id/imageView3"
                 style="@style/boxInChallenge"
                 android:backgroundTint="@color/puzzle9" />
         </LinearLayout>

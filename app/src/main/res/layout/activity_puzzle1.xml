@@ -23,37 +23,32 @@
             android:backgroundTint="@color/puzzle1" />
 
         <ImageView
-            android:id="@+id/imageView2"
             style="@style/boxInChallenge"
             android:layout_alignParentStart="true"
             android:layout_centerVertical="true"
             android:backgroundTint="@color/puzzle1" />
 
         <ImageView
-            android:id="@+id/imageView3"
             style="@style/boxInChallenge"
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
             android:backgroundTint="@color/puzzle1" />
 
         <ImageView
-            android:id="@+id/imageView4"
             style="@style/boxInChallenge"
             android:layout_alignParentBottom="true"
             android:layout_centerHorizontal="true"
             android:backgroundTint="@color/puzzle1" />
 
         <ImageView
-            android:id="@+id/imageView5"
             style="@style/boxInChallenge"
-            android:layout_above="@+id/imageView2"
+            android:layout_above="@+id/imageView1"
             android:layout_centerHorizontal="true"
             android:backgroundTint="@color/puzzle1" />
 
         <ImageView
-            android:id="@+id/imageView6"
             style="@style/boxInChallenge"
-            android:layout_below="@+id/imageView2"
+            android:layout_below="@+id/imageView1"
             android:layout_centerHorizontal="true"
             android:backgroundTint="@color/puzzle1" />
 
