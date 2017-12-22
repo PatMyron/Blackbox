@@ -22,33 +22,21 @@
         android:orientation="vertical"
         tools:context="com.patmyron.blackbox.Puzzle8Activity">
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"
-            android:gravity="center">
+        <LinearLayout style="@style/linearLayoutForEquallySpacedBoxes">
 
             <ImageView
                 style="@style/boxInChallenge"
                 android:backgroundTint="@color/puzzle8" />
         </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"
-            android:gravity="center">
+        <LinearLayout style="@style/linearLayoutForEquallySpacedBoxes">
 
             <ImageView
                 style="@style/boxInChallenge"
                 android:backgroundTint="@color/puzzle8" />
         </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"
-            android:gravity="center">
+        <LinearLayout style="@style/linearLayoutForEquallySpacedBoxes">
 
             <ImageView
                 style="@style/boxInChallenge"

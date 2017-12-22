@@ -41,4 +41,11 @@
         <item name="android:tint">@color/puzzle6translucent</item>
         <item name="srcCompat">@drawable/corner</item>
     </style>
+
+    <style name="linearLayoutForEquallySpacedBoxes">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">0dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:gravity">center</item>
+    </style>
 </resources>
