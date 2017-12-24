@@ -28,7 +28,7 @@
         <item name="android:layout_width">75dp</item>
         <item name="android:layout_height">75dp</item>
         <item name="android:background">@drawable/blink00</item>
-        <item name="android:onClick">hint</item>
+        <!--<item name="android:onClick">hint</item>-->
     </style>
 
     <style name="centerBoxInChallenge" parent="boxInChallenge">
