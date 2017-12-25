@@ -52,6 +52,7 @@ public class Puzzle9Activity extends AppCompatActivity implements SensorEventLis
     protected void onPause() {
         super.onPause();
         mSensorManager.unregisterListener(this);
+        sm.stop();
     }
 
     public void onAccuracyChanged(Sensor sensor, int accuracy) {
