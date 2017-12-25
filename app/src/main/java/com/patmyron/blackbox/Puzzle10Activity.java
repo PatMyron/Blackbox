@@ -61,7 +61,7 @@ public class Puzzle10Activity extends AppCompatActivity implements SensorEventLi
             double amp = sm.getAmplitude();
             WavyLineView view = findViewById(R.id.wavyLineView);
             view.setAmplitude((int) (90 * amp / 32767));
-            view.setPeriod((float) (0.1 * amp / 32767));
+            view.setPeriod((float) (0.1));
         }
     }
 
