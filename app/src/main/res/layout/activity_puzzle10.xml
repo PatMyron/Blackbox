@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/ll"
     android:layout_width="match_parent"
@@ -13,4 +14,12 @@
         style="@style/centerBoxInChallenge"
         android:backgroundTint="@color/puzzle10" />
 
+    <com.patmyron.blackbox.WavyLineView
+        android:id="@+id/wavyLineView"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_alignParentBottom="true"
+        app:period="0"
+        app:strokeColor="@color/puzzle10"
+        app:strokeWidth="1dp" />
 </RelativeLayout>
