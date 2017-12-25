@@ -8,7 +8,6 @@ import android.hardware.Sensor;
 import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
-import android.media.MediaRecorder;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v4.app.ActivityCompat;
@@ -18,8 +17,6 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
-
-import java.io.IOException;
 
 import static com.patmyron.blackbox.MainActivity.getDeviceHeightAndWidth;
 
@@ -93,40 +90,5 @@ public class Puzzle9Activity extends AppCompatActivity implements SensorEventLis
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
         sm = new SoundMeter();
         sm.start();
-    }
-
-    private class SoundMeter {
-        private MediaRecorder mRecorder = null;
-
-        void start() {
-            if (mRecorder == null) {
-                mRecorder = new MediaRecorder();
-                mRecorder.setAudioSource(MediaRecorder.AudioSource.MIC);
-                mRecorder.setOutputFormat(MediaRecorder.OutputFormat.THREE_GPP);
-                mRecorder.setAudioEncoder(MediaRecorder.AudioEncoder.AMR_NB);
-                mRecorder.setOutputFile("/dev/null");
-                try {
-                    mRecorder.prepare();
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-                mRecorder.start();
-            }
-        }
-
-        public void stop() {
-            if (mRecorder != null) {
-                mRecorder.stop();
-                mRecorder.release();
-                mRecorder = null;
-            }
-        }
-
-        double getAmplitude() {
-            if (mRecorder != null)
-                return mRecorder.getMaxAmplitude();
-            else
-                return 0;
-        }
     }
 }
