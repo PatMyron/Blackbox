@@ -21,12 +21,12 @@ import android.view.View;
  */
 public class WavyLineView extends View {
 
-    public static final int   DEF_DRAW_SIZE = 50;
-    public static final int   DEF_COLOR = Color.BLACK;
-    public static final int   DEF_X_GAP = 1;
-    public static final int   DEF_AMPLITUDE = 20;
-    public static final float DEF_STROKE_WIDTH = 2.0f;
-    public static final float DEF_PERIOD = (float) (2 * Math.PI / 180);
+    private static final int   DEF_DRAW_SIZE = 50;
+    private static final int   DEF_COLOR = Color.BLACK;
+    private static final int   DEF_X_GAP = 1;
+    private static final int   DEF_AMPLITUDE = 20;
+    private static final float DEF_STROKE_WIDTH = 2.0f;
+    private static final float DEF_PERIOD = (float) (2 * Math.PI / 180);
 
     private Path mPath;
     private Paint mPaint;
@@ -139,7 +139,7 @@ public class WavyLineView extends View {
         invalidate();
     }
 
-    public static int dp2px(Context context, float dipValue) {
+    private static int dp2px(Context context, float dipValue) {
         final float scale = context.getResources().getDisplayMetrics().density;
         return (int) (dipValue * scale + 0.5f);
     }
