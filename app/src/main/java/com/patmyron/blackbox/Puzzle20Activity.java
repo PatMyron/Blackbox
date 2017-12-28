@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.content.IntentFilter;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.animation.AnimationUtils;
 
 import static com.patmyron.blackbox.MainActivity.animation;
 
@@ -24,6 +25,7 @@ public class Puzzle20Activity extends AppCompatActivity {
     protected void onResume() {
         super.onResume();
         shutdownReceiver();
+        findViewById(R.id.imageView1).startAnimation(AnimationUtils.loadAnimation(this, R.anim.slideright));
     }
 
     @Override
