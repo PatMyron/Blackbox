@@ -17,7 +17,11 @@ import android.view.ViewGroup;
 import android.view.WindowManager;
 import android.widget.ImageView;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
+
+import java.io.IOException;
 import java.util.ArrayList;
+import java.util.HashSet;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -58,9 +62,29 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onResume() {
         super.onResume();
-        SharedPreferences pref = getSharedPreferences("com.patmyron.blackbox", MODE_PRIVATE);
-        String solved = pref.getString("solved", "");
-        // pref.edit().putString("solved", "").apply();
+        SharedPreferences pref = getSharedPreferences(getString(R.string.pref), MODE_PRIVATE);
+        String solved = pref.getString(getString(R.string.prefSolved), "[]");
+        try {
+            HashSet<Integer> set = new ObjectMapper().readValue(solved, HashSet.class);
+            for (Integer i : set) {
+                // TODO box specific instead of whole puzzle
+                ArrayList<ImageView> ivs = getViewsByTag((ViewGroup) findViewById(R.id.ll), ".Puzzle" + i.toString() + "Activity");
+                for (ImageView iv : ivs) {
+                    iv.setImageResource(R.drawable.filled);
+                }
+            }
+        } catch (IOException ignored) {
+        }
+    }
+
+    static void puzzleCompleted(Context context, int puzzleCompleted) {
+        SharedPreferences pref = context.getSharedPreferences(context.getString(R.string.pref), MODE_PRIVATE);
+        try {
+            HashSet<Integer> set = new ObjectMapper().readValue(pref.getString(context.getString(R.string.prefSolved), "[]"), HashSet.class);
+            set.add(puzzleCompleted);
+            pref.edit().putString(context.getString(R.string.prefSolved), new ObjectMapper().writeValueAsString(set)).apply();
+        } catch (Exception ignored) {
+        }
     }
 
     public void puzzleLaunch(View view) {
