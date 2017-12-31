@@ -18,6 +18,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 
+import static com.patmyron.blackbox.MainActivity.animation;
 import static com.patmyron.blackbox.MainActivity.getDeviceHeightAndWidth;
 
 public class Puzzle9Activity extends AppCompatActivity implements SensorEventListener {
@@ -62,9 +63,9 @@ public class Puzzle9Activity extends AppCompatActivity implements SensorEventLis
     public void onSensorChanged(SensorEvent event) {
         if (ActivityCompat.checkSelfPermission(this, Manifest.permission.RECORD_AUDIO) == PackageManager.PERMISSION_GRANTED && sm != null) {
             double amp = sm.getAmplitude();
-            if (amp > (22000 - THRESHOLD)) animation(0);
-            if (Math.abs(amp - 10000) < THRESHOLD) animation(1);
-            if (amp < THRESHOLD) animation(2);
+            if (amp > (22000 - THRESHOLD)) animation(this, 0);
+            if (Math.abs(amp - 10000) < THRESHOLD) animation(this, 1);
+            if (amp < THRESHOLD) animation(this, 2);
             int deviceHeight = getDeviceHeightAndWidth(this).first;
             int deviceWidth = getDeviceHeightAndWidth(this).second;
             ((ViewGroup) findViewById(R.id.merge)).removeAllViews();
@@ -79,12 +80,6 @@ public class Puzzle9Activity extends AppCompatActivity implements SensorEventLis
                 ((RelativeLayout) findViewById(R.id.merge)).addView(imageView, 0);
             }
         }
-    }
-
-    private void animation(int index) {
-        ImageView iv = (ImageView) ((LinearLayout) ((LinearLayout) findViewById(R.id.ll)).getChildAt(index)).getChildAt(0);
-        iv.setBackgroundResource(R.drawable.animation);
-        ((AnimationDrawable) iv.getBackground()).start();
     }
 
     @Override

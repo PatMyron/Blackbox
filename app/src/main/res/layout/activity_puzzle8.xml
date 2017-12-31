@@ -25,6 +25,7 @@
         <LinearLayout style="@style/linearLayoutForEquallySpacedBoxes">
 
             <ImageView
+                android:id="@+id/imageView0"
                 style="@style/boxInChallenge"
                 android:backgroundTint="@color/puzzle8" />
         </LinearLayout>
@@ -32,6 +33,7 @@
         <LinearLayout style="@style/linearLayoutForEquallySpacedBoxes">
 
             <ImageView
+                android:id="@+id/imageView1"
                 style="@style/boxInChallenge"
                 android:backgroundTint="@color/puzzle8" />
         </LinearLayout>
@@ -39,6 +41,7 @@
         <LinearLayout style="@style/linearLayoutForEquallySpacedBoxes">
 
             <ImageView
+                android:id="@+id/imageView2"
                 style="@style/boxInChallenge"
                 android:backgroundTint="@color/puzzle8" />
         </LinearLayout>

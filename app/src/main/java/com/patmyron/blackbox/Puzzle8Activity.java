@@ -1,5 +1,6 @@
 package com.patmyron.blackbox;
 
+import android.app.Activity;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
@@ -15,6 +16,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 
+import static com.patmyron.blackbox.MainActivity.animation;
 import static com.patmyron.blackbox.MainActivity.getDeviceHeightAndWidth;
 
 public class Puzzle8Activity extends AppCompatActivity {
@@ -74,9 +76,9 @@ public class Puzzle8Activity extends AppCompatActivity {
                 if (rawLevel >= 0 && scale > 0) {
                     level = (rawLevel * 100) / scale;
                 }
-                if (level > (100 - THRESHOLD)) animation(0);
-                if (Math.abs(50 - level) < THRESHOLD) animation(1);
-                if (level < THRESHOLD) animation(2);
+                if (level > (100 - THRESHOLD)) animation((Activity) context, 0);
+                if (Math.abs(50 - level) < THRESHOLD) animation((Activity) context, 1);
+                if (level < THRESHOLD) animation((Activity) context, 2);
                 ImageView imageView = new ImageView(context);
                 ((ViewGroup) findViewById(R.id.merge)).removeAllViews();
                 int deviceHeight = getDeviceHeightAndWidth(context).first;
@@ -87,11 +89,5 @@ public class Puzzle8Activity extends AppCompatActivity {
         };
         IntentFilter filter = new IntentFilter(Intent.ACTION_BATTERY_CHANGED);
         registerReceiver(receiver, filter);
-    }
-
-    private void animation(int index) {
-        ImageView iv = (ImageView) ((LinearLayout) ((LinearLayout) findViewById(R.id.ll)).getChildAt(index)).getChildAt(0);
-        iv.setBackgroundResource(R.drawable.animation);
-        ((AnimationDrawable) iv.getBackground()).start();
     }
 }

@@ -21,6 +21,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashSet;
 
 public class MainActivity extends AppCompatActivity {
@@ -45,7 +46,11 @@ public class MainActivity extends AppCompatActivity {
     }
 
     static void animation(Activity activity, int index) {
-        ImageView iv = (ImageView) ((ViewGroup) activity.findViewById(R.id.ll)).getChildAt(index);
+        String name = activity.getClass().getSimpleName().replaceAll("Puzzle", "").replaceAll("Activity", "");
+        puzzleCompleted(activity, Integer.parseInt(name));
+        ImageView iv = new HashSet<>(Arrays.asList(8, 9)).contains(Integer.parseInt(name))
+                ? (ImageView) activity.findViewById(activity.getResources().getIdentifier("imageView" + index, "id", activity.getPackageName()))
+                : (ImageView) ((ViewGroup) activity.findViewById(R.id.ll)).getChildAt(index);
         iv.setBackgroundResource(R.drawable.animation);
         ((AnimationDrawable) iv.getBackground()).start();
     }
