@@ -77,6 +77,11 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    void resetPuzzles() {
+        SharedPreferences pref = getSharedPreferences(getString(R.string.pref), MODE_PRIVATE);
+        pref.edit().putString(getString(R.string.prefSolved), "[]").apply();
+    }
+
     static void puzzleCompleted(Context context, int puzzleCompleted) {
         SharedPreferences pref = context.getSharedPreferences(context.getString(R.string.pref), MODE_PRIVATE);
         try {
