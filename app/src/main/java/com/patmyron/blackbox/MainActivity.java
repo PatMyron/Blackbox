@@ -47,12 +47,12 @@ public class MainActivity extends AppCompatActivity {
 
     static void animation(Activity activity, int index) {
         String name = activity.getClass().getSimpleName().replaceAll("Puzzle", "").replaceAll("Activity", "");
-        puzzleCompleted(activity, Integer.parseInt(name));
         ImageView iv = new HashSet<>(Arrays.asList(8, 9)).contains(Integer.parseInt(name))
                 ? (ImageView) activity.findViewById(activity.getResources().getIdentifier("imageView" + index, "id", activity.getPackageName()))
                 : (ImageView) ((ViewGroup) activity.findViewById(R.id.ll)).getChildAt(index);
         iv.setBackgroundResource(R.drawable.animation);
         ((AnimationDrawable) iv.getBackground()).start();
+        puzzleCompleted(activity, Integer.parseInt(name));
     }
 
     @Override
