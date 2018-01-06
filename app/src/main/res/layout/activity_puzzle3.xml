@@ -8,6 +8,7 @@
     tools:context="com.patmyron.blackbox.Puzzle3Activity">
 
     <ImageView
+        android:id="@+id/imageView0"
         style="@style/boxInChallenge"
         android:layout_alignParentEnd="true"
         android:layout_alignParentTop="true"
@@ -15,6 +16,7 @@
         android:backgroundTint="@color/puzzle3" />
 
     <ImageView
+        android:id="@+id/imageView1"
         style="@style/boxInChallenge"
         android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
@@ -22,6 +24,7 @@
         android:backgroundTint="@color/puzzle3" />
 
     <ImageView
+        android:id="@+id/imageView2"
         style="@style/boxInChallenge"
         android:layout_alignParentBottom="true"
         android:layout_alignParentStart="true"
@@ -29,6 +32,7 @@
         android:backgroundTint="@color/puzzle3" />
 
     <ImageView
+        android:id="@+id/imageView3"
         style="@style/boxInChallenge"
         android:layout_margin="100dp"
         android:backgroundTint="@color/puzzle3" />

@@ -46,12 +46,10 @@ public class MainActivity extends AppCompatActivity {
     }
 
     static void animation(Activity activity, int index) {
-        String name = activity.getClass().getSimpleName().replaceAll("Puzzle", "").replaceAll("Activity", "");
-        ImageView iv = new HashSet<>(Arrays.asList(8, 9)).contains(Integer.parseInt(name))
-                ? (ImageView) activity.findViewById(activity.getResources().getIdentifier("imageView" + index, "id", activity.getPackageName()))
-                : (ImageView) ((ViewGroup) activity.findViewById(R.id.ll)).getChildAt(index);
+        ImageView iv = activity.findViewById(activity.getResources().getIdentifier("imageView" + index, "id", activity.getPackageName()));
         iv.setBackgroundResource(R.drawable.animation);
         ((AnimationDrawable) iv.getBackground()).start();
+        String name = activity.getClass().getSimpleName().replaceAll("Puzzle", "").replaceAll("Activity", "");
         puzzleCompleted(activity, Integer.parseInt(name));
     }
 

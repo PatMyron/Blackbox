@@ -29,7 +29,7 @@ public class Puzzle29Activity extends AppCompatActivity {
                 timer.schedule(new TimerTask() {
                     @Override
                     public void run() {
-                        anim(1);
+                        anim(0);
                     }
                 }, THRESHOLD);
                 final int reps = 50;

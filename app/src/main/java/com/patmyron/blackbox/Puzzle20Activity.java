@@ -25,7 +25,7 @@ public class Puzzle20Activity extends AppCompatActivity {
     protected void onResume() {
         super.onResume();
         shutdownReceiver();
-        findViewById(R.id.imageView1).startAnimation(AnimationUtils.loadAnimation(this, R.anim.slideright));
+        findViewById(R.id.imageView0).startAnimation(AnimationUtils.loadAnimation(this, R.anim.slideright));
     }
 
     @Override

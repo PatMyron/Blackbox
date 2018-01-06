@@ -32,6 +32,7 @@
     </style>
 
     <style name="centerBoxInChallenge" parent="boxInChallenge">
+        <item name="android:id">@+id/imageView0</item>
         <item name="android:layout_centerInParent">true</item>
     </style>
 

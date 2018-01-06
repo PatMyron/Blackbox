@@ -15,7 +15,7 @@ public class Puzzle17Activity extends AppCompatActivity implements ShakeDetector
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_puzzle17);
-        findViewById(R.id.imageView1).startAnimation(AnimationUtils.loadAnimation(this, R.anim.wiggle));
+        findViewById(R.id.imageView0).startAnimation(AnimationUtils.loadAnimation(this, R.anim.wiggle));
         new ShakeDetector(this).start((SensorManager) getSystemService(SENSOR_SERVICE));
     }
 
