@@ -42,13 +42,13 @@
 
         <ImageView
             style="@style/boxInChallenge"
-            android:layout_above="@+id/imageView1"
+            android:layout_above="@id/imageView1"
             android:layout_centerHorizontal="true"
             android:backgroundTint="@color/puzzle1" />
 
         <ImageView
             style="@style/boxInChallenge"
-            android:layout_below="@+id/imageView1"
+            android:layout_below="@id/imageView1"
             android:layout_centerHorizontal="true"
             android:backgroundTint="@color/puzzle1" />
 
