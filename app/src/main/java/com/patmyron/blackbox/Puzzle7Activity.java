@@ -28,7 +28,7 @@ public class Puzzle7Activity extends AppCompatActivity {
     }
 
     private void arc(int start) {
-        RADIUS = Collections.min(Arrays.asList(RADIUS, getDeviceHeightAndWidth(this).first - 24, getDeviceHeightAndWidth(this).second - 24));
+        RADIUS = Collections.min(Arrays.asList(RADIUS, getDeviceHeightAndWidth(this).first - 64, getDeviceHeightAndWidth(this).second - 64));
         ShapeDrawable arcShape = new ShapeDrawable(new ArcShape(start - 90, 30));
         arcShape.getPaint().setColor(getResources().getColor(R.color.bg));
         arcShape.setIntrinsicHeight(RADIUS);
