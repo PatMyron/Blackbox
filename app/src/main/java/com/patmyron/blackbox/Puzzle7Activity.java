@@ -7,13 +7,16 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
 import java.util.Date;
 
 import static com.patmyron.blackbox.MainActivity.getDeviceHeightAndWidth;
 
 public class Puzzle7Activity extends AppCompatActivity {
 
-    private static final int RADIUS = 1200;
+    private int RADIUS = 1200;
     private static final double PERCENTAGE = .75;
 
     @Override
@@ -25,13 +28,14 @@ public class Puzzle7Activity extends AppCompatActivity {
     }
 
     private void arc(int start) {
+        RADIUS = Collections.min(Arrays.asList(RADIUS, getDeviceHeightAndWidth(this).first - 24, getDeviceHeightAndWidth(this).second - 24));
         ShapeDrawable arcShape = new ShapeDrawable(new ArcShape(start - 90, 30));
         arcShape.getPaint().setColor(getResources().getColor(R.color.bg));
         arcShape.setIntrinsicHeight(RADIUS);
         arcShape.setIntrinsicWidth(RADIUS);
         ImageView imageView = new ImageView(this);
-        imageView.setX(getDeviceHeightAndWidth(this).second / 2.0f - RADIUS / 2.0f);
-        imageView.setY(getDeviceHeightAndWidth(this).first / 2.0f - RADIUS / 2.0f - 75 / 2.0f);
+        imageView.setX((float) (getDeviceHeightAndWidth(this).second / 2.0 - RADIUS / 2.0));
+        imageView.setY((float) (getDeviceHeightAndWidth(this).first / 2.0 - RADIUS / 2.0 - 75 / 2.0));
         imageView.setImageDrawable(arcShape);
         ((ViewGroup) findViewById(R.id.ll)).addView(imageView);
 
