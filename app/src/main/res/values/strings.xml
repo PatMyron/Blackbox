@@ -2,4 +2,5 @@
     <string name="app_name">Blackbox</string>
     <string name="pref">com.patmyron.blackbox</string>
     <string name="prefSolved">solved</string>
+    <string name="prefClock">hours</string>
 </resources>

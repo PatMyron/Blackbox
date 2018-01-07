@@ -21,7 +21,6 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.HashSet;
 
 public class MainActivity extends AppCompatActivity {
@@ -50,7 +49,17 @@ public class MainActivity extends AppCompatActivity {
         iv.setBackgroundResource(R.drawable.animation);
         ((AnimationDrawable) iv.getBackground()).start();
         String name = activity.getClass().getSimpleName().replaceAll("Puzzle", "").replaceAll("Activity", "");
-        puzzleCompleted(activity, Integer.parseInt(name));
+        puzzleCompleted(activity, Integer.parseInt(name), activity.getString(R.string.prefSolved));
+    }
+
+    static void puzzleCompleted(Context context, int puzzleCompleted, String prefString) {
+        SharedPreferences pref = context.getSharedPreferences(context.getString(R.string.pref), MODE_PRIVATE);
+        try {
+            HashSet<Integer> set = new ObjectMapper().readValue(pref.getString(prefString, "[]"), HashSet.class);
+            set.add(puzzleCompleted);
+            pref.edit().putString(prefString, new ObjectMapper().writeValueAsString(set)).apply();
+        } catch (Exception ignored) {
+        }
     }
 
     @Override
@@ -83,16 +92,6 @@ public class MainActivity extends AppCompatActivity {
     void resetPuzzles() {
         SharedPreferences pref = getSharedPreferences(getString(R.string.pref), MODE_PRIVATE);
         pref.edit().putString(getString(R.string.prefSolved), "[]").apply();
-    }
-
-    static void puzzleCompleted(Context context, int puzzleCompleted) {
-        SharedPreferences pref = context.getSharedPreferences(context.getString(R.string.pref), MODE_PRIVATE);
-        try {
-            HashSet<Integer> set = new ObjectMapper().readValue(pref.getString(context.getString(R.string.prefSolved), "[]"), HashSet.class);
-            set.add(puzzleCompleted);
-            pref.edit().putString(context.getString(R.string.prefSolved), new ObjectMapper().writeValueAsString(set)).apply();
-        } catch (Exception ignored) {
-        }
     }
 
     public void puzzleLaunch(View view) {

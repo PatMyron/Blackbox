@@ -1,5 +1,6 @@
 package com.patmyron.blackbox;
 
+import android.content.SharedPreferences;
 import android.graphics.drawable.ShapeDrawable;
 import android.graphics.drawable.shapes.ArcShape;
 import android.os.Bundle;
@@ -7,24 +8,40 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 
-import java.util.ArrayList;
+import com.fasterxml.jackson.databind.ObjectMapper;
+
+import java.io.IOException;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.Date;
+import java.util.HashSet;
 
+import static com.patmyron.blackbox.MainActivity.animation;
 import static com.patmyron.blackbox.MainActivity.getDeviceHeightAndWidth;
+import static com.patmyron.blackbox.MainActivity.puzzleCompleted;
 
 public class Puzzle7Activity extends AppCompatActivity {
 
-    private int RADIUS = 1200;
     private static final double PERCENTAGE = .75;
+    private int RADIUS = 1200;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_puzzle7);
 
-        arc(new Date().getHours() * 30);
+        puzzleCompleted(this, new Date().getHours() % 12, this.getString(R.string.prefClock));
+
+        SharedPreferences pref = getSharedPreferences(getString(R.string.pref), MODE_PRIVATE);
+        String completed = pref.getString(getString(R.string.prefClock), "[]");
+        try {
+            HashSet<Integer> set = new ObjectMapper().readValue(completed, HashSet.class);
+            for (Integer i : set) {
+                arc(i * 30);
+            }
+            if (set.size() == 12) animation(this, 0);
+        } catch (IOException ignored) {
+        }
     }
 
     private void arc(int start) {
