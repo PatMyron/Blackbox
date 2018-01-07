@@ -17,8 +17,6 @@ import org.junit.Rule;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
-import java.util.ArrayList;
-
 import static android.support.test.espresso.Espresso.onView;
 import static android.support.test.espresso.Espresso.pressBack;
 import static android.support.test.espresso.action.ViewActions.click;
@@ -34,28 +32,6 @@ public class MainActivityTest {
 
     @Rule
     public ActivityTestRule<MainActivity> mActivityTestRule = new ActivityTestRule<>(MainActivity.class);
-
-    @Test
-    public void mainActivityTest() {
-        ImmutableList<Integer> list = ImmutableList.of(12, 18, 24, 25, 19, 13, 20, 32, 33, 22, 16, 17, 5, 4);
-        for (int i: list) {
-            clickButtonAndGoBack(i);
-        }
-    }
-
-    private void clickButtonAndGoBack(int position) {
-        ViewInteraction appCompatImageButton = onView(
-                allOf(childAtPosition(
-                        allOf(withId(R.id.ll),
-                                childAtPosition(
-                                        withClassName(is("com.jrummyapps.android.widget.TwoDScrollView")),
-                                        0)),
-                        position),
-                        isDisplayed()));
-        appCompatImageButton.perform(click());
-
-        pressBack();
-    }
 
     private static Matcher<View> childAtPosition(
             final Matcher<View> parentMatcher, final int position) {
@@ -74,5 +50,27 @@ public class MainActivityTest {
                         && view.equals(((ViewGroup) parent).getChildAt(position));
             }
         };
+    }
+
+    @Test
+    public void mainActivityTest() {
+        ImmutableList<Integer> list = ImmutableList.of(12, 18, 24, 25, 19, 13, 20, 32, 33, 22, 16, 17, 5, 4);
+        for (int i : list) {
+            clickButtonAndGoBack(i);
+        }
+    }
+
+    private void clickButtonAndGoBack(int position) {
+        ViewInteraction appCompatImageButton = onView(
+                allOf(childAtPosition(
+                        allOf(withId(R.id.ll),
+                                childAtPosition(
+                                        withClassName(is("com.jrummyapps.android.widget.TwoDScrollView")),
+                                        0)),
+                        position),
+                        isDisplayed()));
+        appCompatImageButton.perform(click());
+
+        pressBack();
     }
 }

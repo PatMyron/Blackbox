@@ -12,8 +12,8 @@ import static com.patmyron.blackbox.MainActivity.animation;
 
 public class Puzzle29Activity extends AppCompatActivity {
 
-    private Timer timer;
     private static final int THRESHOLD = 5000;
+    private Timer timer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
