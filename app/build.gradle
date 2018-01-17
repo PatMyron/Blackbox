@@ -35,5 +35,6 @@ dependencies {
     compile 'com.fasterxml.jackson.core:jackson-databind:2.8.5'
     compile 'com.fasterxml.jackson.core:jackson-core:2.8.5'
     compile 'com.fasterxml.jackson.core:jackson-annotations:2.8.5'
+    compile 'cesine.educmupocketsphinx:pocketsphinx-android:5prealpha@aar'
     testCompile 'junit:junit:4.12'
 }
