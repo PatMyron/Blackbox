@@ -28,7 +28,7 @@ dependencies {
     compile 'com.android.support:appcompat-v7:27.0.2'
     compile 'com.android.support:support-v4:27.0.2'
     compile 'com.android.support.constraint:constraint-layout:1.0.2'
-    compile 'com.google.android.gms:play-services-location:11.8.0'
+    compile 'com.google.android.gms:play-services-location:16.0.0'
     compile 'com.jaredrummler:twodscrollview:1.0.1'
     compile 'com.squareup:seismic:1.0.2'
     compile 'org.shredzone.commons:commons-suncalc:2.0'
