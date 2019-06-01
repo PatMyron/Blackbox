@@ -33,7 +33,7 @@ dependencies {
     compile 'com.squareup:seismic:1.0.2'
     compile 'org.shredzone.commons:commons-suncalc:2.0'
     compile 'com.fasterxml.jackson.core:jackson-databind:2.8.5'
-    compile 'com.fasterxml.jackson.core:jackson-core:2.8.5'
+    compile 'com.fasterxml.jackson.core:jackson-core:2.9.9'
     compile 'com.fasterxml.jackson.core:jackson-annotations:2.8.5'
     compile 'cesine.educmupocketsphinx:pocketsphinx-android:5prealpha@aar'
     testCompile 'junit:junit:4.12'
